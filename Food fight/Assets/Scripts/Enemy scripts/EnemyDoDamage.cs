@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class EnemyDoDamage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private float damage;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        
-    }
+        var healthController = collision.gameObject.GetComponent<HealthController>();
+
+        healthController.TakeDamage(damage);
+    } 
 }
