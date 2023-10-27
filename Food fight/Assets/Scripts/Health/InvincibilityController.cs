@@ -12,7 +12,7 @@ public class InvincibilityController : MonoBehaviour
         healthController = GetComponent<HealthController>();
     }
 
-    private void StartInvincibility(float invincibilitySeconds)
+    public void StartInvincibility(float invincibilitySeconds)
     {
         StartCoroutine(InvincibilityCoroutine(invincibilitySeconds));
     }

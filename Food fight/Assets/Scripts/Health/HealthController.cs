@@ -32,6 +32,12 @@ public class HealthController : MonoBehaviour
         {
             return;
         }
+
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+
         if (currentHealth != 0)
         {
             currentHealth -= damage;
@@ -42,11 +48,6 @@ public class HealthController : MonoBehaviour
             OnDied.Invoke();
             //På playerns healthcontroller måste även attack-scriptet läggas in som en bool på OnDied, för att det ska stängas av när man dör. 
             //För ex. fiender ska det istället läggas in deras attacker och movement osv. 
-        }
-
-        if (currentHealth < 0)
-        {
-            currentHealth = 0;
         }
 
         return;
