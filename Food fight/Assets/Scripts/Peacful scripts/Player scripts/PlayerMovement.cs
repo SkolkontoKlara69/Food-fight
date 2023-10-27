@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -26,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     public float gravityScale;
     public float fallingGravityScale;
 
+    public Camera camera;
+    public Vector3 cameraOffset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +40,15 @@ public class PlayerMovement : MonoBehaviour
         capsuleCollider.size = regularSize;
 
         crouchingSizeY = regularSizeY / 2;
+
+        camera = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        camera.transform.position = new Vector3(transform.position.x * cameraOffset.x, transform.position.y * cameraOffset.y,cameraOffset.z);
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
