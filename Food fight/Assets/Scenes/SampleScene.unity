@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 1792970740}
   - component: {fileID: 1792970739}
   - component: {fileID: 1792970742}
+  - component: {fileID: 1792970743}
   m_Layer: 0
   m_Name: Player placeholder- Anka
   m_TagString: Untagged
@@ -438,7 +439,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1792970743}
+        m_TargetAssemblyTypeName: PlayerDamageInvincibility, Assembly-CSharp
+        m_MethodName: StartInvincibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!70 &1792970739
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -506,6 +519,8 @@ MonoBehaviour:
   jumpReady: 0
   gravityScale: 5
   fallingGravityScale: 15
+  camera: {fileID: 0}
+  cameraOffset: {x: 1, y: 1, z: -10}
 --- !u!114 &1792970742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +533,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a09584cc6d1ce741a6cbd262aba1049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1792970743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792970735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b43af3a04864a048989db2bb79cf276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvincibilitySeconds: 0.5
 --- !u!1001 &4488085094903090875
 PrefabInstance:
   m_ObjectHideFlags: 0
