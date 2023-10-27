@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundLayer;
     public bool isTouchingGround;
-    public float timeSinceLanding;
     public bool jumpReady;
 
     public float gravityScale;
@@ -42,21 +41,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeSinceLanding += Time.deltaTime;
 
-        if (timeSinceLanding >= 1)
-        {
-            jumpReady = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
+            velocity = 2;
+            jumpVelocity = 10;
         }
 
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
         {
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
+            velocity = 5;
+            jumpVelocity = 15;
         }
 
         move = Input.GetAxis("Horizontal");
@@ -65,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround && jumpReady)
+        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround)
         {
             jump();
         }
@@ -83,6 +80,5 @@ public class PlayerMovement : MonoBehaviour
     public void jump()
     {
         player.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
-        jumpReady = false;
     }
 }
