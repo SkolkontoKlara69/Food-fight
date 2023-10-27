@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundLayer;
     public bool isTouchingGround;
-    public bool jumpReady;
 
     public float gravityScale;
     public float fallingGravityScale;
