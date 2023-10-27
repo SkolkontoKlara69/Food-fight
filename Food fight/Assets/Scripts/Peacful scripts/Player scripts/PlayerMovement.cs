@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpVelocity;
     private float move;
 
+    bool isFacingRight = true;
+
     public float regularSizeX;
     public float regularSizeY;
     public float crouchingSizeY;
@@ -22,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundLayer;
     public bool isTouchingGround;
-    public bool jumpReady;
 
     public float gravityScale;
     public float fallingGravityScale;
@@ -62,6 +63,14 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
             velocity = 5;
             jumpVelocity = 15;
+        }
+
+        if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
         }
 
         move = Input.GetAxis("Horizontal");
