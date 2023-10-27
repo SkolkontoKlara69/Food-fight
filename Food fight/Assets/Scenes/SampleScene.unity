@@ -332,8 +332,9 @@ GameObject:
   - component: {fileID: 1792970741}
   - component: {fileID: 1792970740}
   - component: {fileID: 1792970739}
+  - component: {fileID: 1792970742}
   m_Layer: 0
-  m_Name: Anka
+  m_Name: Player placeholder- Anka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,6 +436,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!70 &1792970739
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -468,9 +472,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1792970741
 MonoBehaviour:
@@ -488,21 +492,32 @@ MonoBehaviour:
   capsuleCollider: {fileID: 1792970739}
   velocity: 5
   jumpVelocity: 15
-  regularSizeX: 0
-  regularSizeY: 0
+  regularSizeX: 0.1173003
+  regularSizeY: 0.1527036
   crouchingSizeY: 0
   regularSize: {x: 0, y: 0}
   crouchingSize: {x: 0, y: 0}
   groundCheck: {fileID: 1324317019}
-  groundCheckRadius: 0
+  groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   isTouchingGround: 0
-  timeSinceLanding: 0
   jumpReady: 0
   gravityScale: 5
   fallingGravityScale: 15
+--- !u!114 &1792970742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792970735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a09584cc6d1ce741a6cbd262aba1049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4488085094903090875
 PrefabInstance:
   m_ObjectHideFlags: 0

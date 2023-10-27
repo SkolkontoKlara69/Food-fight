@@ -24,6 +24,8 @@ public class HealthController : MonoBehaviour
 
     public UnityEvent OnDied;
 
+    public UnityEvent OnDamaged;
+
     public void TakeDamage(float damage)
     {
         if (isInvincible == true)
@@ -33,6 +35,7 @@ public class HealthController : MonoBehaviour
         if (currentHealth != 0)
         {
             currentHealth -= damage;
+            OnDamaged.Invoke();
         }
         else
         {
