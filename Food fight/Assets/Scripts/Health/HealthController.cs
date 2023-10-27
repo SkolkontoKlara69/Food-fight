@@ -20,13 +20,25 @@ public class HealthController : MonoBehaviour
         }
     }
 
+    public bool isInvincible { get; set; }
+
     public UnityEvent OnDied;
 
     public void TakeDamage(float damage)
     {
+        if (isInvincible == true)
+        {
+            return;
+        }
         if (currentHealth != 0)
         {
             currentHealth -= damage;
+        }
+        else
+        {
+            OnDied.Invoke();
+            //På playerns healthcontroller måste även attack-scriptet läggas in som en bool på OnDied, för att det ska stängas av när man dör. 
+            //För ex. fiender ska det istället läggas in deras attacker och movement osv. 
         }
 
         if (currentHealth < 0)
