@@ -54,15 +54,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
-            velocity = 2;
-            jumpVelocity = 10;
+            velocity = 5;
+            jumpVelocity = 20;
         }
 
         if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
         {
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
-            velocity = 5;
-            jumpVelocity = 15;
+            velocity = 10;
+            jumpVelocity = 20;
         }
 
         if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
@@ -96,6 +96,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void jump()
     {
-        player.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
+        player.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse); 
     }
 }
