@@ -48,6 +48,8 @@ public class HealthController : MonoBehaviour
 
     public UnityEvent Respawn;
 
+    public UnityEvent HealthChanged;
+
     public void TakeDamage(float damage)
     {
         if (isInvincible == true)
@@ -63,6 +65,7 @@ public class HealthController : MonoBehaviour
         if (currentHealth != 0)
         {
             currentHealth -= damage;
+            HealthChanged.Invoke();
             OnDamaged.Invoke();
         }
         else
@@ -81,6 +84,7 @@ public class HealthController : MonoBehaviour
         if (currentHealth != maximumHealth)
         {
             currentHealth += addAmount;
+            HealthChanged.Invoke();
         }
 
         if (currentHealth > maximumHealth)
@@ -101,5 +105,6 @@ public class HealthController : MonoBehaviour
         transform.position = startPos;
         Respawn.Invoke();
         currentHealth = maximumHealth;
+        HealthChanged.Invoke();
     }
 }

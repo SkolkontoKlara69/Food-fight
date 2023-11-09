@@ -6,7 +6,7 @@ public class HealthBar : MonoBehaviour
 {
     [SerializeField]
     private UnityEngine.UI.Image healthBarRöd;
-    void UpdateHealthBar(HealthController healthController)
+    public void UpdateHealthBar(HealthController healthController)
     {
         healthBarRöd.fillAmount = healthController.remainingHealthPercentage;
     }
