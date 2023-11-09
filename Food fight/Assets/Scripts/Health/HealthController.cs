@@ -7,7 +7,12 @@ public class HealthController : MonoBehaviour
 {
 
     Vector2 startPos;
+    SpriteRenderer spriteRenderer;
 
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     public void Start()
     {
         startPos = transform.position;
@@ -17,9 +22,7 @@ public class HealthController : MonoBehaviour
     {
         if (currentHealth == 0)
         {
-            transform.position = startPos;
-            Respawn.Invoke();
-            currentHealth = maximumHealth;
+            Die();            
         }
     }
 
@@ -86,4 +89,17 @@ public class HealthController : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        StartCoroutine(Respawned(0.5f));
+    }
+
+    IEnumerator Respawned(float duration)
+    {
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(duration);
+        transform.position = startPos;
+        Respawn.Invoke();
+        currentHealth = maximumHealth;
+    }
 }
