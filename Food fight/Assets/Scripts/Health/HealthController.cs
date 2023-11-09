@@ -6,8 +6,25 @@ using UnityEngine.Events;
 public class HealthController : MonoBehaviour
 {
 
+    Vector2 startPos;
+
+    public void Start()
+    {
+        startPos = transform.position;
+    }
+
+    public void Update()
+    {
+        if (currentHealth == 0)
+        {
+            transform.position = startPos;
+            Respawn.Invoke();
+            currentHealth = maximumHealth;
+        }
+    }
+
     [SerializeField]
-    private float currentHealth;
+    public float currentHealth;
 
     [SerializeField]
     private float maximumHealth;
@@ -25,6 +42,8 @@ public class HealthController : MonoBehaviour
     public UnityEvent OnDied;
 
     public UnityEvent OnDamaged;
+
+    public UnityEvent Respawn;
 
     public void TakeDamage(float damage)
     {
@@ -66,6 +85,5 @@ public class HealthController : MonoBehaviour
             currentHealth = maximumHealth;
         }
     }
-    
 
 }
