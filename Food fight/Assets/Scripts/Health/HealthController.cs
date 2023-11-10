@@ -7,8 +7,25 @@ public class HealthController : MonoBehaviour
 {
 
     Vector2 startPos;
+
     SpriteRenderer spriteRenderer;
+
     public Transform playerYPosition;
+
+    [SerializeField]
+    public float currentHealth;
+
+    [SerializeField]
+    private float maximumHealth;
+    public bool isInvincible { get; set; }
+
+    public UnityEvent OnDied;
+
+    public UnityEvent OnDamaged;
+
+    public UnityEvent Respawn;
+
+    public UnityEvent HealthChanged;
 
     private void Awake()
     {
@@ -19,6 +36,13 @@ public class HealthController : MonoBehaviour
         startPos = transform.position;
     }
 
+    public float remainingHealthPercentage
+    {
+        get
+        {
+            return currentHealth / maximumHealth;
+        }
+    }
     public void Update()
     {
         if (currentHealth == 0)
@@ -32,33 +56,10 @@ public class HealthController : MonoBehaviour
 
         if(playerYPosition.position.y < -20)
         {
-            Die();
+            currentHealth = 0;
+            HealthChanged.Invoke();
         }
     }
-
-    [SerializeField]
-    public float currentHealth;
-
-    [SerializeField]
-    private float maximumHealth;
-
-    public float remainingHealthPercentage
-    {
-        get
-        {
-            return currentHealth / maximumHealth;
-        }
-    }
-
-    public bool isInvincible { get; set; }
-
-    public UnityEvent OnDied;
-
-    public UnityEvent OnDamaged;
-
-    public UnityEvent Respawn;
-
-    public UnityEvent HealthChanged;
 
     public void TakeDamage(float damage)
     {
