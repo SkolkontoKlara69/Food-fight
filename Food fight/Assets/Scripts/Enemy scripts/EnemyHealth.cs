@@ -29,9 +29,7 @@ public class EnemyHealth : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Die()
-    {
-        Debug.Log("Enemy died!");
-        
+    {        
         GetComponent<AI_walking>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
