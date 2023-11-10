@@ -986,7 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912d4222e9e51c8458e29e02c5f922ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerYPosition: {fileID: 0}
+  playerYPosition: {fileID: 1792970737}
   currentHealth: 100
   maximumHealth: 100
   OnDied:

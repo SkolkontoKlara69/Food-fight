@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+    SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,10 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     void Die()
     {
         Debug.Log("Enemy died!");
@@ -30,5 +35,12 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<AI_walking>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+        StartCoroutine(Despawn(0.5f));
+    }
+
+    IEnumerator Despawn(float duration)
+    {
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(duration);        
     }
 }
