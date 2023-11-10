@@ -8,6 +8,7 @@ public class HealthController : MonoBehaviour
 
     Vector2 startPos;
     SpriteRenderer spriteRenderer;
+    public Transform playerYPosition;
 
     private void Awake()
     {
@@ -27,6 +28,11 @@ public class HealthController : MonoBehaviour
         else
         {
             spriteRenderer.enabled = true;
+        }
+
+        if(playerYPosition.position.y < -20)
+        {
+            Die();
         }
     }
 
