@@ -24,6 +24,10 @@ public class HealthController : MonoBehaviour
         {
             Die();            
         }
+        else
+        {
+            spriteRenderer.enabled = true;
+        }
     }
 
     [SerializeField]
