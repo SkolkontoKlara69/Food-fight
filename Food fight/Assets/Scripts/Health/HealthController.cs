@@ -48,11 +48,7 @@ public class HealthController : MonoBehaviour
         if (currentHealth == 0)
         {
             Die();            
-        }
-        else
-        {
-            spriteRenderer.enabled = true;
-        }
+        }        
 
         if(playerYPosition.position.y < -20)
         {
@@ -114,7 +110,7 @@ public class HealthController : MonoBehaviour
         spriteRenderer.enabled = false;
         yield return new WaitForSeconds(duration);
         transform.position = startPos;
-        Respawn.Invoke();
+        spriteRenderer.enabled = true;        
         currentHealth = maximumHealth;
         HealthChanged.Invoke();
     }
