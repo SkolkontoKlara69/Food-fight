@@ -79,19 +79,13 @@ public class PlayerMovement : MonoBehaviour
 
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround)
-        {
-            jump();
-        }
+        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround)        
+            jump();        
 
-        if (player.velocity.y > 0)
-        {
-            player.gravityScale = gravityScale;
-        }
-        else
-        {
-            player.gravityScale = gravityScale;
-        }
+        if (player.velocity.y > 0)        
+            player.gravityScale = gravityScale;        
+        else        
+            player.gravityScale = gravityScale;        
     }
 
     public void jump()

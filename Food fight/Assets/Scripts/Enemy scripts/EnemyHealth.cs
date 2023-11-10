@@ -19,18 +19,14 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if(currentHealth <= 0)
-        {
-            Die();
-        }
+        if(currentHealth <= 0)       
+            Die();        
     }
 
     public void Update()
     {        
-        if (enemyYPosition.position.y < -20)
-        {
-            Die();
-        }
+        if (enemyYPosition.position.y < -20)        
+            Die();        
     }
 
     private void Awake()
