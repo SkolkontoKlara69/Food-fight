@@ -2293,7 +2293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197225261}
   m_Layer: 0
-  m_Name: 'Recovery GameObject for Transform (ID in file: 197225261)'
+  m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2979,6 +2979,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1076929684}
+  - {fileID: 197225261}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2994,6 +2995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912d4222e9e51c8458e29e02c5f922ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerYPosition: {fileID: 1792970737}
   currentHealth: 100
   maximumHealth: 100
   OnDied:
