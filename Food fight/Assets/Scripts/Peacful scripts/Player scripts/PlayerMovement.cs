@@ -26,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public bool isTouchingGround;
 
+    public Transform roofCheck;
+    public float roofCheckRadius;
+    public bool isTouchingRoof; 
+
     public float gravityScale;
     public float fallingGravityScale;
 
@@ -67,6 +71,18 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.offset = new Vector2(0, 0);
         }
 
+        isTouchingRoof = Physics2D.OverlapCircle(roofCheck.position, roofCheckRadius, groundLayer);
+
+        if (isTouchingRoof)
+        {
+            capsuleCollider.offset = new Vector2(0, -0.14f);
+            capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
+        }
+        else if (!isTouchingGround)
+        {
+            capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
+        }
+
         if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
         {
             isFacingRight = !isFacingRight;
@@ -79,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         player.velocity = new Vector2(velocity * move, player.velocity.y);
 
-        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer); 
 
         if (Input.GetKeyDown(KeyCode.W) && isTouchingGround || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround)        
             jump();        
