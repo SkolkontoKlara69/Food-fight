@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,6 +34,7 @@ public class InventoryScript : MonoBehaviour
 
     public void AddItem(string itemName, Sprite itemSprite)
     {
+        Debug.Log(itemName);
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if(itemSlot[i].isFilled == false)

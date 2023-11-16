@@ -20,8 +20,10 @@ public class Item : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("aaaaaaaaaa");
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("bbbbbbb");
             inventoryScript.AddItem(itemName, sprite);
             Destroy(gameObject);
         }
