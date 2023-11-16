@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         else if (!isTouchingGround)
         {
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
+            capsuleCollider.offset = new Vector2(0, 0);
         }
 
         if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
