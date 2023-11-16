@@ -26,9 +26,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public bool isTouchingGround;
 
-    public Transform roofCheck;
-    public float roofCheckRadius;
-    public bool isTouchingRoof; 
+    public Transform roofCheck1;
+    public Transform roofCheck2;
+    public bool isTouchingRoof;
+    public LayerMask roofCheckLayer;
 
     public float gravityScale;
     public float fallingGravityScale;
@@ -71,7 +72,14 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.offset = new Vector2(0, 0);
         }
 
-        isTouchingRoof = Physics2D.OverlapCircle(roofCheck.position, roofCheckRadius, groundLayer);
+        if(Physics2D.OverlapArea(roofCheck1.position, roofCheck2.position, groundLayer) && isTouchingGround)
+        {
+            isTouchingRoof = true;
+        }
+        else
+        {
+            isTouchingRoof = false;
+        }
 
         if (isTouchingRoof)
         {
