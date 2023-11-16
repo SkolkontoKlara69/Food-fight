@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 regularSize;
     public Vector2 crouchingSize;
+    public Vector2 offset;
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -48,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         camera.transform.position = new Vector3(transform.position.x * cameraOffset.x, transform.position.y * cameraOffset.y,cameraOffset.z);
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
             velocity = 5;
             jumpVelocity = 20;
+            capsuleCollider.offset = new Vector2(0, -0.14f); 
         }
 
         if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
             velocity = 10;
             jumpVelocity = 20;
+            capsuleCollider.offset = new Vector2(0, 0);
         }
 
         if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
