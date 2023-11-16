@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 4cc33e6d754932947810ec8eb6df3cc8, type: 3}
   isFilled: 0
   itemText: {fileID: 5252601054321829099}
   itemImage: {fileID: 5252601054465445041}
