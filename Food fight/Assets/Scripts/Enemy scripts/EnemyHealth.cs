@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     SpriteRenderer spriteRenderer;
+    public Transform enemyYPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,14 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if(currentHealth <= 0)
-        {
-            Die();
-        }
+        if(currentHealth <= 0)       
+            Die();        
+    }
+
+    public void Update()
+    {        
+        if (enemyYPosition.position.y < -20)        
+            Die();        
     }
 
     private void Awake()

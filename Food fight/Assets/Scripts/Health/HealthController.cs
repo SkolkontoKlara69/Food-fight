@@ -45,10 +45,8 @@ public class HealthController : MonoBehaviour
     }
     public void Update()
     {
-        if (currentHealth == 0)
-        {
-            Die();            
-        }        
+        if (currentHealth == 0)        
+            Die();                    
 
         if(playerYPosition.position.y < -20)
         {
@@ -59,15 +57,11 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (isInvincible == true)
-        {
-            return;
-        }
+        if (isInvincible == true)        
+            return;        
 
-        if (currentHealth < 0)
-        {
-            currentHealth = 0;
-        }
+        if (currentHealth < 0)        
+            currentHealth = 0;       
 
         if (currentHealth != 0)
         {
@@ -94,10 +88,8 @@ public class HealthController : MonoBehaviour
             HealthChanged.Invoke();
         }
 
-        if (currentHealth > maximumHealth)
-        {
-            currentHealth = maximumHealth;
-        }
+        if (currentHealth > maximumHealth)        
+            currentHealth = maximumHealth;        
     }
 
     public void Die()
