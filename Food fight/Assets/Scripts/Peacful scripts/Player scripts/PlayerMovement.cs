@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 regularSize;
     public Vector2 crouchingSize;
-    public Vector2 offset;
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -37,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
     public Camera camera;
     public Vector3 cameraOffset;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite idle;
+    public Sprite crouched;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         crouchingSizeY = regularSizeY / 2;
 
         camera = Camera.main;
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>(); 
     }
 
     // Update is called once per frame
@@ -61,7 +66,8 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
             velocity = 5;
             jumpVelocity = 20;
-            capsuleCollider.offset = new Vector2(0, -0.14f); 
+            capsuleCollider.offset = new Vector2(0, -0.14f);
+            spriteRenderer.sprite = crouched;
         }
 
         if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
@@ -70,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
             velocity = 10;
             jumpVelocity = 20;
             capsuleCollider.offset = new Vector2(0, 0);
+            spriteRenderer.sprite = idle;
         }
 
         if(Physics2D.OverlapArea(roofCheck1.position, roofCheck2.position, groundLayer) && isTouchingGround)
