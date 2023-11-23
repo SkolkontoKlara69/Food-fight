@@ -12,10 +12,19 @@ public class AI_walking : MonoBehaviour
     public bool isChasing;
     public float chaseDistance;
 
+    public GameObject player;
+
     private void Awake()
     {
-        GameObject player = GameObject.Find ("Player (2)");
-        Transform playerTransform = player.transform;
+        /*GameObject player = GameObject.Find ("Player");
+        Transform playerTransform = player.transform;*/
+
+        if(player == null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+
+        playerTransform = player.transform; 
     }
 
     // Update is called once per frame
