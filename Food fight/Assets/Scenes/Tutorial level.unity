@@ -859,8 +859,7 @@ MonoBehaviour:
     m_Bits: 128
   attackRange: 1
   attackDamage: 30
-  attackRate: 2
-  nextAttackTime: 0
+  attackReady: 1
 --- !u!70 &315600335
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2423,6 +2422,21 @@ MonoBehaviour:
   paused: 0
   settingsMenu: 0
   pauseKey: 0
+  OnPause:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 315600330}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   pauseMenu: {fileID: 1144453682}
   settingsMenuObj: {fileID: 1651490777}
 --- !u!1 &941000824
@@ -2892,7 +2906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fefa8d589e7e34dab83439f6f3e7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarCyan: {fileID: 1198215611}
+  cyan: {fileID: 0}
 --- !u!1 &1054489049
 GameObject:
   m_ObjectHideFlags: 0
