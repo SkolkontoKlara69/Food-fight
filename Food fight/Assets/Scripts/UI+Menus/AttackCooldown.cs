@@ -5,10 +5,10 @@ using UnityEngine;
 public class AttackCooldown : MonoBehaviour
 {
     [SerializeField]
-    private UnityEngine.UI.Image healthBarCyan;
+    private UnityEngine.UI.Image cyan;
 
-    public void UpdateAttackBar(PlayerAttack attackCooldown)
+    public void UpdateAttackBar(PlayerAttack playerAttack)
     {
-        healthBarCyan.fillAmount = attackCooldown.remainingAttackCooldown;
+        cyan.fillAmount = playerAttack.remainingAttackCooldown; 
     }
 }
