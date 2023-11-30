@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Camera camera;
     public Vector3 cameraOffset;
+    public float cameraY;
 
     public SpriteRenderer spriteRenderer;
     public Sprite idle;
@@ -53,14 +54,23 @@ public class PlayerMovement : MonoBehaviour
 
         camera = Camera.main;
 
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>(); 
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        cameraY = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        camera.transform.position = new Vector3(transform.position.x * cameraOffset.x, transform.position.y * cameraOffset.y,cameraOffset.z);
-
+       /* if(transform.position.y >= 5f)
+        {
+            while (camera.transform.position.y != transform.position.y)
+                cameraY++;
+                camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, cameraY, cameraOffset.z);
+        }
+        else
+            camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, 3.28f, cameraOffset.z);
+       */
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
