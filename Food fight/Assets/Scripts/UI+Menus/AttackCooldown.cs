@@ -7,8 +7,8 @@ public class AttackCooldown : MonoBehaviour
     [SerializeField]
     private UnityEngine.UI.Image healthBarCyan;
 
-    public void UpdateAttackBar(PlayerAttack nextAttackTime)
+    public void UpdateAttackBar(PlayerAttack attackCooldown)
     {
-        healthBarCyan.fillAmount = PlayerAttack.remainingAttackCooldown;
+        healthBarCyan.fillAmount = attackCooldown.remainingAttackCooldown;
     }
 }

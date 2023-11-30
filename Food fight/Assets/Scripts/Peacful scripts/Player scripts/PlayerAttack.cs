@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public int attackDamage;
     public float attackRate; 
-    float nextAttackTime = 0f; 
+    public float nextAttackTime = 0f; 
 
     // Update is called once per frame
     void Update()
@@ -44,5 +44,13 @@ public class PlayerAttack : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    public float remainingAttackCooldown
+    {
+        get
+        {
+            return nextAttackTime;
+        }
     }
 }
