@@ -48,8 +48,7 @@ public class AI_walking : MonoBehaviour
                 isChasing = true;
             }
             
-            
-            
+
             if (destination == 0)
             {
                 transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, movmentSpeed * Time.deltaTime);
@@ -66,6 +65,11 @@ public class AI_walking : MonoBehaviour
                     destination = 0;
                 }
             }
+        }
+
+        if (Vector2.Distance(transform.position, playerTransform.position) > chaseDistance)
+        {
+            isChasing = false;
         }
     }
 }
