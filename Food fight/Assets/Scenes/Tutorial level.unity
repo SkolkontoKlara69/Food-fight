@@ -737,6 +737,7 @@ MonoBehaviour:
   fallingGravityScale: 15
   camera: {fileID: 2059275427}
   cameraOffset: {x: 1, y: 1, z: -10}
+  cameraY: 0
   spriteRenderer: {fileID: 315600328}
   idle: {fileID: 21300000, guid: 0d009d107fccca44ab09aba2232fac5a, type: 3}
   crouched: {fileID: 21300000, guid: 2015da15ff57b2243915f52bd164cd6f, type: 3}
@@ -859,6 +860,7 @@ MonoBehaviour:
   attackRange: 1
   attackDamage: 30
   attackRate: 2
+  nextAttackTime: 0
 --- !u!70 &315600335
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4937,6 +4939,7 @@ GameObject:
   - component: {fileID: 2059275428}
   - component: {fileID: 2059275427}
   - component: {fileID: 2059275426}
+  - component: {fileID: 2059275429}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5010,6 +5013,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059275429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059275425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436a4f7eabb17574ab08715976958066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 315600329}
+  smoothSpeed: 0.125
+  locationOffset: {x: 0, y: 0, z: -10}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &2063071878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5153304543718495778, guid: 4a083ff041df3a045a302f1b6da19041, type: 3}
