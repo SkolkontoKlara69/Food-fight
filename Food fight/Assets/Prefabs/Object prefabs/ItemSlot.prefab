@@ -304,10 +304,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 7482667652216324306, guid: df4cee59bd4c6b2479bda98a8e35ab14, type: 3}
   isFilled: 0
+  itemDescription: 
   itemText: {fileID: 981135750323283762}
   itemImage: {fileID: 9040008256120955415}
+  itemDescriptionImage: {fileID: 0}
+  itemDescriptionText: {fileID: 0}
+  itemDescriptionNameText: {fileID: 0}
+  selectedShader: {fileID: 3912143636767141}
+  thisItemSelected: 0
 --- !u!1 &7368201431667877784
 GameObject:
   m_ObjectHideFlags: 0
