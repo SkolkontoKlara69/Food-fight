@@ -9,21 +9,32 @@ public class PlayerAttack : MonoBehaviour
     
     public float attackRange;
     public int attackDamage;
-    public float attackRate; 
-    public float nextAttackTime = 0f; 
+    public float attackReady = 1;
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        //attackReady += 
+
+        if(attackReady == 1)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
+                StartCoroutine(AttackCooldown()); 
             }
         }
+        else if (attackReady > 1)
+        {
+            attackReady = 1;
+        }
     }
+
+    //attack
+    //attackReady 1 --> 0 
+    //attackReady += nummer 
+    //if attackReady = 1 
+    //attack
 
     void Attack(){
         //Attack animation här
@@ -46,11 +57,18 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
+    private IEnumerator AttackCooldown()
+    {
+        attackReady = 0;
+        yield return new WaitForSeconds(1.0f);
+        attackReady = 1;
+    }
+
     public float remainingAttackCooldown
     {
         get
         {
-            return nextAttackTime;
+            return attackReady;
         }
     }
 }

@@ -10,6 +10,9 @@ public class Item : MonoBehaviour
     [SerializeField]
     private Sprite sprite;
 
+    [SerializeField]
+    private string itemDescription;
+
     private InventoryScript inventoryScript;
 
     // Start is called before the first frame update
@@ -20,11 +23,9 @@ public class Item : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("aaaaaaaaaa");
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("bbbbbbb");
-            inventoryScript.AddItem(itemName, sprite);
+            inventoryScript.AddItem(itemName, itemDescription, sprite);
             Destroy(gameObject);
         }
     }
