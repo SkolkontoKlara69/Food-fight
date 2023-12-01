@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    void Start()
+    public void OnGui()
     {
-        /* Later, when everything is adapted to not using the mouse
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    /* Later, when everything is adapted to not using mouse
+    {
+        
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        */
-    }
+       
+    } */
 }
