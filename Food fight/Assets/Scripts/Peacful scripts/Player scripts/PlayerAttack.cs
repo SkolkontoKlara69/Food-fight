@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public int attackDamage;
     public float attackReady = 1;
+
+    public UnityEvent CooldownChanged; 
 
     // Update is called once per frame
     void Update()
@@ -68,7 +71,7 @@ public class PlayerAttack : MonoBehaviour
     {
         get
         {
-            return attackReady;
+            return attackReady; 
         }
     }
 }
