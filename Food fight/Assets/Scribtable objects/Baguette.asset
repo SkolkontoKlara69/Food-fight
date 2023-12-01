@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74bb5c70530da264cb6ab70b8e600a7d, type: 3}
   m_Name: Baguette
   m_EditorClassIdentifier: 
-  itemname: 
-  statToChange: 0
+  itemname: Baguette
+  statToChange: 3
+  amountToChangeStat: 0

@@ -6,10 +6,13 @@ public class CameraZoom : MonoBehaviour
 {
     private float zoom;
     private float zoomMultiplier = 4f;
-    private float minZoom = 2f;
-    private float maxZoom = 8f;
+    private float minZoom = 8f;
+    private float maxZoom = 12f;
     private float velocityScroll = 0f;
     private float smoothTimeScroll = 0.25f;
+    private float scroll;
+
+    public Transform playerTransform;
 
     [SerializeField] private Camera cam;
 
@@ -33,10 +36,21 @@ public class CameraZoom : MonoBehaviour
 
     void Update()
     {
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-        zoom -= scroll * zoomMultiplier;
-        zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
-        cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, zoom, ref velocityScroll, smoothTime);
+        if(playerTransform.position.y >= 4.5 && cam.orthographicSize <= 12)
+        {
+            scroll = -1;
+            zoom -= scroll * zoomMultiplier;
+            zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
+            cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, zoom, ref velocityScroll, smoothTime);
+        }
+        else
+        {
+            scroll = +1;
+            zoom -= scroll * zoomMultiplier;
+            zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
+            cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, zoom, ref velocityScroll, smoothTime);
+        }
+   
     }
     private void Awake()
     {
