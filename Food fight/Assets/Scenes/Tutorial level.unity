@@ -995,6 +995,21 @@ MonoBehaviour:
   attackRange: 1
   attackDamage: 30
   attackReady: 1
+  CooldownChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1028093660}
+        m_TargetAssemblyTypeName: AttackCooldown, Assembly-CSharp
+        m_MethodName: UpdateAttackBar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 315600334}
+          m_ObjectArgumentAssemblyTypeName: PlayerAttack, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!70 &315600335
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3043,7 +3058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fefa8d589e7e34dab83439f6f3e7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cyan: {fileID: 0}
+  cyan: {fileID: 1198215611}
 --- !u!1 &1054489049
 GameObject:
   m_ObjectHideFlags: 0
