@@ -3913,7 +3913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsMenuObj: {fileID: 0}
   confirmExitMenu: {fileID: 0}
-  confirmMainMenu: {fileID: 0}
+  confirmMainMenu: {fileID: 2026629278}
 --- !u!1 &1144453682
 GameObject:
   m_ObjectHideFlags: 0
@@ -7618,7 +7618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go to main menu anyways
+  m_text: Go back to pause menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
