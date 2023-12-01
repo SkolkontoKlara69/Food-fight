@@ -24,7 +24,7 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.x < doorTransform.position.x + 1.3)
+        if (playerTransform.position.x < doorTransform.position.x + 1.25)
         {
             GetComponent<BoxCollider2D>().enabled = false;
         }
