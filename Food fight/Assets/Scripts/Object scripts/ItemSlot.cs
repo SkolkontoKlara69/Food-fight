@@ -10,6 +10,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     //=====ITEM DATA=====//
     public string itemName;
     public Sprite itemSprite;
+    public Sprite emptySprite;
     public bool isFilled;
     public string itemDescription;
 
@@ -66,16 +67,30 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         if (thisItemSelected)
         {
             inventoryScript.UseItem(itemName);
+            EmptySlot();
         }
-        inventoryScript.DeselectAllSlots();
-        selectedShader.SetActive(true);
-        thisItemSelected = true;
-        itemDescriptionNameText.text = itemName;
-        itemDescriptionText.text = itemDescription;
-        itemDescriptionImage.sprite = itemSprite;
+
+        else
+        {
+            inventoryScript.DeselectAllSlots();
+            selectedShader.SetActive(true);
+            thisItemSelected = true;
+            itemDescriptionNameText.text = itemName;
+            itemDescriptionText.text = itemDescription;
+            itemDescriptionImage.sprite = itemSprite;
+        }
+        
     }
     public void OnRightClick()
     {
 
+    }
+
+    public void EmptySlot()
+    {
+        itemImage.sprite = emptySprite;
+        itemDescriptionNameText.text = "";
+        itemDescriptionText.text = "";
+        itemDescriptionImage.sprite = emptySprite;
     }
 }

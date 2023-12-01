@@ -305,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   itemSprite: {fileID: 7482667652216324306, guid: df4cee59bd4c6b2479bda98a8e35ab14, type: 3}
+  emptySprite: {fileID: 7482667652216324306, guid: df4cee59bd4c6b2479bda98a8e35ab14, type: 3}
   isFilled: 0
   itemDescription: 
   itemText: {fileID: 981135750323283762}
