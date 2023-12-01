@@ -7350,16 +7350,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059275425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436a4f7eabb17574ab08715976958066, type: 3}
+  m_Script: {fileID: 11500000, guid: 35e7293ae9c9efb468c2f31050b0d885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 315600329}
-  smoothSpeed: 0.125
-  locationOffset: {x: 3.03, y: 2.5, z: -10}
-  rotationOffset: {x: 0, y: 0, z: 0}
-  lockY: 1
-  camera: {fileID: 0}
-  cameraYPosition: 0
+  playerTransform: {fileID: 315600329}
+  cam: {fileID: 2059275427}
+  smoothTime: 0.2
+  positionOffset: {x: 0, y: 0, z: -10}
+  xLimit: {x: 3, y: 137, z: 0}
+  yLimit: {x: 2.5, y: 5, z: 0}
 --- !u!4 &2063071878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5153304543718495778, guid: 4a083ff041df3a045a302f1b6da19041, type: 3}
