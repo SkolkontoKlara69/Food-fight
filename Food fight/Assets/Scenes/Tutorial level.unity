@@ -1423,6 +1423,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fde55b8a313d44a99b93d8f67dec3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 315600329}
+  player: {fileID: 0}
+  doorTransform: {fileID: 439704942}
+  door: {fileID: 439704939}
 --- !u!1 &476705448
 GameObject:
   m_ObjectHideFlags: 0
