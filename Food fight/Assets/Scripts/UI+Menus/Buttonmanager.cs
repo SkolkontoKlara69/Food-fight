@@ -19,6 +19,12 @@ public class Buttonmanager : MonoBehaviour
         confirmMainMenu.SetActive(false);
     }
 
+    public void OnContinuePress()
+    {
+        GameObject pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
+        pauseManager.GetComponent<PauseManager>().paused = false;
+    }
+
     // Menu related buttons
     public void OnMenuButtonPress()
     {
