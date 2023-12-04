@@ -12,9 +12,17 @@ public class Buttonmanager : MonoBehaviour
     public GameObject confirmExitMenu;
     public GameObject confirmMainMenu;
 
-    GameObject[] pauseButtons = GameObject.FindGameObjectsWithTag("PauseButton");
-    GameObject[] confirmMainMenuButtons = GameObject.FindGameObjectsWithTag("PauseButton");
+    GameObject[] pauseButtons;
+    GameObject[] confirmMainMenuButtons;
 
+    GameObject pauseManager;
+
+    private void Awake()
+    {
+        pauseButtons = GameObject.FindGameObjectsWithTag("PauseButton");
+        confirmMainMenuButtons = GameObject.FindGameObjectsWithTag("PauseButton");
+        pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
+    }
     public void Start()
     {
 
@@ -27,8 +35,7 @@ public class Buttonmanager : MonoBehaviour
     }
 
     public void OnContinuePress()
-    {
-        GameObject pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
+    { 
         pauseManager.GetComponent<PauseManager>().paused = false;
     }
 
