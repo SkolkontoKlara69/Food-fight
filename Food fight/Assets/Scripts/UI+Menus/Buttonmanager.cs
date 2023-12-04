@@ -9,29 +9,27 @@ public class Buttonmanager : MonoBehaviour
 
     public GameObject settingsMenuObj;
 
-    public GameObject confirmExitMenu;
-    public GameObject confirmMainMenu;
-
     GameObject[] pauseButtons;
     GameObject[] confirmMainMenuButtons;
+    GameObject[] confirmExitButtons;
 
     GameObject pauseManager;
 
     private void Awake()
     {
         pauseButtons = GameObject.FindGameObjectsWithTag("PauseButton");
-        confirmMainMenuButtons = GameObject.FindGameObjectsWithTag("PauseButton");
+        confirmMainMenuButtons = GameObject.FindGameObjectsWithTag("confirmMainMenu");
         pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
+        confirmExitButtons = GameObject.FindGameObjectsWithTag("confirmExit");
     }
     public void Start()
     {
 
         ShowButtons(pauseButtons, true);
         ShowButtons(confirmMainMenuButtons, false);
+        ShowButtons(confirmExitButtons, false);
 
         settingsMenuObj.SetActive(false);
-        confirmExitMenu.SetActive(false);
-        confirmMainMenu.SetActive(false);
     }
 
     public void OnContinuePress()
@@ -50,7 +48,8 @@ public class Buttonmanager : MonoBehaviour
     // Menu related buttons
     public void OnMenuButtonPress()
     {
-        confirmMainMenu.SetActive(true);
+
+        ShowButtons(confirmMainMenuButtons, true);
         ShowButtons(pauseButtons, false);
     }
 
@@ -61,15 +60,15 @@ public class Buttonmanager : MonoBehaviour
 
     public void OnConfirmNoPress()
     {
-        confirmExitMenu.SetActive(false);
-        confirmMainMenu.SetActive(false);
-        ShowButtons(pauseButtons, false);
+        ShowButtons(confirmExitButtons, false);
+        ShowButtons(confirmMainMenuButtons, false);
+        ShowButtons(pauseButtons, true);
     }
 
     //Exit related buttons
     public void OnExitButtonPress()
     {
-        confirmExitMenu.SetActive(true);
+        ShowButtons(confirmExitButtons, true);
         ShowButtons(pauseButtons, false);
     }
 
