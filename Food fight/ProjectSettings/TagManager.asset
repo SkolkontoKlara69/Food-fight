@@ -8,6 +8,7 @@ TagManager:
   - PauseButton
   - confirmMainMenu
   - confirmExit
+  - settings
   layers:
   - Default
   - TransparentFX
