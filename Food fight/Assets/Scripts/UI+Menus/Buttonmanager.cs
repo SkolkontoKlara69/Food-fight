@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 public class Buttonmanager : MonoBehaviour
 {
 
-    public GameObject settingsMenuObj;
 
     GameObject[] pauseButtons;
     GameObject[] confirmMainMenuButtons;
     GameObject[] confirmExitButtons;
+    GameObject[] settingsObjs;
 
     GameObject pauseManager;
 
@@ -21,6 +21,7 @@ public class Buttonmanager : MonoBehaviour
         confirmMainMenuButtons = GameObject.FindGameObjectsWithTag("confirmMainMenu");
         pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
         confirmExitButtons = GameObject.FindGameObjectsWithTag("confirmExit");
+        settingsObjs = GameObject.FindGameObjectsWithTag("settings");
     }
     public void Start()
     {
@@ -28,8 +29,7 @@ public class Buttonmanager : MonoBehaviour
         ShowButtons(pauseButtons, true);
         ShowButtons(confirmMainMenuButtons, false);
         ShowButtons(confirmExitButtons, false);
-
-        settingsMenuObj.SetActive(false);
+        ShowButtons(settingsObjs, false);
     }
 
     public void OnContinuePress()
@@ -83,6 +83,6 @@ public class Buttonmanager : MonoBehaviour
     //Settings related buttons
     public void OnSettingsPress()
     {
-        settingsMenuObj.SetActive(true);
+        ShowButtons(settingsObjs, true);
     }
 }
