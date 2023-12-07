@@ -25,32 +25,38 @@ public class InventoryScript : MonoBehaviour
             InventoryMenu.SetActive(true);
             menuActivated = true;
             Time.timeScale = 0;
+            WaitTime();
         }
+    }
+
+    public IEnumerable WaitTime()
+    {
+        yield return new WaitForSeconds(3f);
     }
 
     public void UseItem(string itemName)
     {
         for (int i = 0; i < itemSOs.Length; i++)
         {
-            if(itemSOs[i].itemname == itemName)
+            if (itemSOs[i].itemname == itemName)
             {
                 itemSOs[i].UseItem();
             }
         }
     }
 
-    public void AddItem(string itemName, string itemDescription, Sprite itemSprite)
+    public void AddItem(string itemName, string itemDescription, Sprite itemSprite, ItemType itemType)
     {
         Debug.Log(itemName);
         for (int i = 0; i < itemSlot.Length; i++)
         {
-            if(itemSlot[i].isFilled == false)
+            if (itemSlot[i].isFilled == false)
             {
-                itemSlot[i].AddItem(itemName, itemDescription,itemSprite);
+                itemSlot[i].AddItem(itemName, itemDescription, itemSprite, itemType);
                 return;
             }
         }
-        
+
     }
 
     public void DeselectAllSlots()
@@ -62,3 +68,9 @@ public class InventoryScript : MonoBehaviour
         }
     }
 }
+public enum ItemType
+{
+    none,
+    head,
+    sword,
+};
