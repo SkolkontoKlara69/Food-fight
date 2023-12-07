@@ -17,27 +17,22 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(attackReady == 1)
+        if (attackReady == 1)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Attack();
-                StartCoroutine(AttackCooldown()); 
+                //StartCoroutine(AttackCooldown()); denna behövs inte längre
+                attackReady = 0;
             }
         }
-        else if (attackReady > 1)
+        else if (attackReady != 1)
         {
-            attackReady = 1;
+            Cooldown();
         }
 
         CooldownChanged.Invoke();
     }
-
-    //attack
-    //attackReady 1 --> 0 
-    //attackReady += nummer 
-    //if attackReady = 1 
-    //attack
 
     void Attack(){
         //Attack animation här
@@ -60,11 +55,16 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    private IEnumerator AttackCooldown()
+    /*private IEnumerator AttackCooldown()
     {
         attackReady = 0;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f); allt detta behövs inte längre
         attackReady = 1;
+    }*/
+
+    void Cooldown()
+    {
+        attackReady = Mathf.MoveTowards(attackReady, 1, 2 * Time.deltaTime);
     }
 
     public float remainingAttackCooldown

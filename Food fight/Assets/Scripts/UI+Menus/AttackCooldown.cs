@@ -11,7 +11,7 @@ public class AttackCooldown : MonoBehaviour
     private float reduceSpeed = 2;
     private float target = 1;
 
-    //måste på nåt sätt fixa så att cooldown baren inte går ner space trycks på när attacken inte är reda
+    //måste på nåt sätt fixa så att cooldown baren inte går ner space trycks på när attacken inte är redo
 
     public void UpdateAttackBar(PlayerAttack playerAttack)
     {
@@ -24,6 +24,7 @@ public class AttackCooldown : MonoBehaviour
 
     public void Update()
     {
-        cyan.fillAmount = Mathf.MoveTowards(cyan.fillAmount, target, reduceSpeed * Time.deltaTime); 
+        cyan.fillAmount = target;
+        //cyan.fillAmount = Mathf.MoveTowards(cyan.fillAmount, target, reduceSpeed * Time.deltaTime); detta behövs inte längre 
     }
 }
