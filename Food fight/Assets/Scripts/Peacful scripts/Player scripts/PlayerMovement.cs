@@ -23,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;
+    public LayerMask enemyLayer;
     public bool isTouchingGround;
+    public bool standingOnEnemies;
 
     public Transform roofCheck1;
     public Transform roofCheck2;
@@ -71,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         else
             camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, 3.28f, cameraOffset.z);
        */
+
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
@@ -121,12 +124,20 @@ public class PlayerMovement : MonoBehaviour
 
         player.velocity = new Vector2(velocity * move, player.velocity.y);
 
-        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer); 
+        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
 
-        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround)        
-            jump();        
+        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround)
+        {
+            jump();
+        }
 
-        if (player.velocity.y > 0)        
+        if(Input.GetKeyDown(KeyCode.W) && standingOnEnemies || Input.GetKeyDown(KeyCode.UpArrow) && standingOnEnemies)
+        {
+            jump();
+        }
+
+        if (player.velocity.y > 0)     
             player.gravityScale = gravityScale;        
         else        
             player.gravityScale = gravityScale;        
