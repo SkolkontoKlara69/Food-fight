@@ -9,50 +9,48 @@ public class Buttonmanager : MonoBehaviour
 
     public GameObject settingsMenuObj;
 
-    public GameObject confirmExitMenu;
-    public GameObject confirmMainMenu;
+    GameObject[] pauseButtons;
+    GameObject[] confirmMainMenuButtons;
+    GameObject[] confirmExitButtons;
 
-    GameObject[] pauseButtons = GameObject.FindGameObjectsWithTag("PauseButton");
+    GameObject pauseManager;
 
-
+    private void Awake()
+    {
+        pauseButtons = GameObject.FindGameObjectsWithTag("PauseButton");
+        confirmMainMenuButtons = GameObject.FindGameObjectsWithTag("confirmMainMenu");
+        pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
+        confirmExitButtons = GameObject.FindGameObjectsWithTag("confirmExit");
+    }
     public void Start()
     {
-        settingsMenuObj.SetActive(false);
-        confirmExitMenu.SetActive(false);
-        confirmMainMenu.SetActive(false);
 
-        for (int i = 0; i < pauseButtons.Length; i++)
-        {
-            pauseButtons[i].SetActive(true);
-        }
+        ShowButtons(pauseButtons, true);
+        ShowButtons(confirmMainMenuButtons, false);
+        ShowButtons(confirmExitButtons, false);
+
+        settingsMenuObj.SetActive(false);
     }
 
     public void OnContinuePress()
-    {
-        GameObject pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
+    { 
         pauseManager.GetComponent<PauseManager>().paused = false;
     }
 
-    private void HidePauseButtons()
-    {
-        for (int i = 0; i < pauseButtons.Length; i++)
-        {
-            pauseButtons[i].SetActive(false);
-        }
-    }
 
-    private void ShowPauseButtons()
+    private void ShowButtons(GameObject[] buttons, bool activeOrNo)
     {
-        for (int i = 0; i < pauseButtons.Length; i++)
+        for (int i = 0; i < buttons.Length; i++)
         {
-            pauseButtons[i].SetActive(true);
+            buttons[i].SetActive(activeOrNo);
         }
     }
     // Menu related buttons
     public void OnMenuButtonPress()
     {
-        confirmMainMenu.SetActive(true);
-        HidePauseButtons();
+
+        ShowButtons(confirmMainMenuButtons, true);
+        ShowButtons(pauseButtons, false);
     }
 
     public void OnMenuYesPress()
@@ -62,15 +60,16 @@ public class Buttonmanager : MonoBehaviour
 
     public void OnConfirmNoPress()
     {
-        confirmExitMenu.SetActive(false);
-        confirmMainMenu.SetActive(false);
+        ShowButtons(confirmExitButtons, false);
+        ShowButtons(confirmMainMenuButtons, false);
+        ShowButtons(pauseButtons, true);
     }
 
     //Exit related buttons
     public void OnExitButtonPress()
     {
-        confirmExitMenu.SetActive(true);
-        HidePauseButtons();
+        ShowButtons(confirmExitButtons, true);
+        ShowButtons(pauseButtons, false);
     }
 
     public void OnExitYesPress()

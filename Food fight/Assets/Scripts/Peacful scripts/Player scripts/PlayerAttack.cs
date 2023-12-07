@@ -17,8 +17,6 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //attackReady += 
-
         if(attackReady == 1)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -31,6 +29,8 @@ public class PlayerAttack : MonoBehaviour
         {
             attackReady = 1;
         }
+
+        CooldownChanged.Invoke();
     }
 
     //attack
@@ -63,7 +63,7 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator AttackCooldown()
     {
         attackReady = 0;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.25f);
         attackReady = 1;
     }
 
