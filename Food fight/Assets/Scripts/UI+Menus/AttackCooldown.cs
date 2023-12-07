@@ -8,7 +8,7 @@ public class AttackCooldown : MonoBehaviour
     private UnityEngine.UI.Image cyan;
 
     [SerializeField]
-    private float reduceSpeed = 2;
+    //private float reduceSpeed = 2;
     private float target = 1;
 
     //måste på nåt sätt fixa så att cooldown baren inte går ner space trycks på när attacken inte är redo
