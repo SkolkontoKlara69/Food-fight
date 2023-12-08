@@ -66,15 +66,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if(transform.position.y >= 5f)
-        {
-            while (camera.transform.position.y != transform.position.y)
-                cameraY++;
-                camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, cameraY, cameraOffset.z);
-        }
-        else
-            camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, 3.28f, cameraOffset.z);
-       */
+        /* if(transform.position.y >= 5f)
+         {
+             while (camera.transform.position.y != transform.position.y)
+                 cameraY++;
+                 camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, cameraY, cameraOffset.z);
+         }
+         else
+             camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, 3.28f, cameraOffset.z);
+        */
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -90,13 +90,15 @@ public class PlayerMovement : MonoBehaviour
         //offsetta spelarens och colliderns position uppåt till dit spriten är (kanske fungerar)
         //eller:
         //sätt spriten till ett child och offsetta childet (kanske fungerar)
+        //eller:
+        //ta bort offsetten på collidern och offsetta hela spelarens position istället för att undvika att spelaren faller ner en liten bit när den crouchar (kanske fungerar)
 
         if (isCrouched)
         {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
             velocity = 5;
             jumpVelocity = 20;
-            capsuleCollider.offset = new Vector2(0, -0.14f);
+            capsuleCollider.offset = new Vector2(0, -0.07f);
             spriteRenderer.sprite = crouched;
         }
         else
@@ -119,9 +121,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (isTouchingRoof)
         {
-            capsuleCollider.offset = new Vector2(0, -0.14f);
+            capsuleCollider.offset = new Vector2(0, -0.07f);
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
-            //måste ha spriten för crouch här också
+            spriteRenderer.sprite = crouched;
+            velocity = 5;
         }
 
         if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
