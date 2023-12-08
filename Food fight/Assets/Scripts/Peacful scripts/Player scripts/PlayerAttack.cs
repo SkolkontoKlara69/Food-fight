@@ -17,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        attackDamage = GameObject.Find("PlayerStatManager").GetComponent<PlayerStats>().damage;
         if (attackReady == 1)
         {
             if (Input.GetKeyDown(KeyCode.Space))

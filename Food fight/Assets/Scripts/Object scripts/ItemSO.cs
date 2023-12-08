@@ -6,19 +6,28 @@ using UnityEngine;
 public class ItemSO : ScriptableObject
 {
     public string itemname;
-    public StatToChange statToChange = new StatToChange();
-    public int amountToChangeStat;
+    public int damage, health, speed, defence;
 
-    public void UseItem()
+
+    public void EquipItem()
     {
-        GameObject.Find("Player (2)").GetComponent<PlayerAttack>().attackDamage *= 2;
+        PlayerStats playerStats = GameObject.Find("PlayerStatManager").GetComponent<PlayerStats>();
+        playerStats.damage += damage;
+        playerStats.health += health;
+        playerStats.speed += speed;
+        playerStats.defence += defence;
+
+        playerStats.UppdateStats();
+    }
+    public void UnEquipItem()
+    {
+        PlayerStats playerStats = GameObject.Find("PlayerStatManager").GetComponent<PlayerStats>();
+        playerStats.damage -= damage;
+        playerStats.health -= health;
+        playerStats.speed -= speed;
+        playerStats.defence -= defence;
+
+        playerStats.UppdateStats();
     }
 
-    public enum StatToChange
-    {
-        none,
-        health,
-        stamina,
-        damage
-    };
 }
