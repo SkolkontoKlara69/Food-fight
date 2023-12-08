@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Baguette
   m_EditorClassIdentifier: 
   itemname: Baguette
-  statToChange: 3
-  amountToChangeStat: 0
+  damage: 30
+  health: 0
+  speed: 0
+  defence: 0

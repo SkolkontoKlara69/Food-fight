@@ -7,6 +7,7 @@ public class InventoryScript : MonoBehaviour
     public GameObject InventoryMenu;
     private bool menuActivated;
     public ItemSlot[] itemSlot;
+    public EquippedSlot[] equipedSlots;
     public ItemSO[] itemSOs;
 
 
@@ -40,14 +41,13 @@ public class InventoryScript : MonoBehaviour
         {
             if (itemSOs[i].itemname == itemName)
             {
-                itemSOs[i].UseItem();
+                itemSOs[i].EquipItem();
             }
         }
     }
 
     public void AddItem(string itemName, string itemDescription, Sprite itemSprite, ItemType itemType)
     {
-        Debug.Log(itemName);
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if (itemSlot[i].isFilled == false)
@@ -65,6 +65,11 @@ public class InventoryScript : MonoBehaviour
         {
             itemSlot[i].thisItemSelected = false;
             itemSlot[i].selectedShader.SetActive(false);
+        }
+        for (int i = 0; i < equipedSlots.Length; i++)
+        {
+            equipedSlots[i].thisItemSelected = false;
+            equipedSlots[i].selectedShader.SetActive(false);
         }
     }
 }
