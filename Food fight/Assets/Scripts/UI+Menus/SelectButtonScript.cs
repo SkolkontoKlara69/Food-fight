@@ -12,27 +12,23 @@ public class SelectButtonScript : MonoBehaviour
     public GameObject firstConfirmExitButton;
     public EventSystem eventSystem;
 
-    GameObject pausObj;
-    GameObject settingsobj;
-    GameObject confirmMenuObj;
-    GameObject confirmExitObj;
-
     void Start()
     {
-       settingsobj = GameObject.FindGameObjectWithTag("settings");
+        /*
+       settingsObj = GameObject.FindGameObjectWithTag("settings");
        confirmMenuObj = GameObject.FindGameObjectWithTag("confirmMainMenu");
        confirmExitObj = GameObject.FindGameObjectWithTag("confirmExit");
-       pausObj = GameObject.FindGameObjectWithTag("PauseButton");
-
+       pauseObj = GameObject.FindGameObjectWithTag("PauseButton");
+        */
         eventSystem.firstSelectedGameObject = firstMenuButton;
     }
 
     public void Update()
     {
-        bool settingsActive = settingsobj.activeInHierarchy;
-        bool confirmMenuActive = confirmMenuObj.activeInHierarchy;
-        bool confirmExitActive = confirmExitObj.activeInHierarchy;
-        bool pauseActive = pausObj.activeInHierarchy;
+        bool settingsActive = firstSettingsButton.activeInHierarchy;
+        bool confirmMenuActive = firstConfirmMenuButton.activeInHierarchy;
+        bool confirmExitActive = firstConfirmExitButton.activeInHierarchy;
+        bool pauseActive = firstMenuButton.activeInHierarchy;
         
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
         {
@@ -40,6 +36,7 @@ public class SelectButtonScript : MonoBehaviour
             {
 
                 eventSystem.SetSelectedGameObject(firstSettingsButton, new BaseEventData(eventSystem));
+
             }
             else if (confirmMenuActive)
             {
