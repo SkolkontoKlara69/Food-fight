@@ -45,7 +45,7 @@ public class HealthController : MonoBehaviour
     }
     public void Update()
     {
-        if (currentHealth == 0)        
+        if (currentHealth <= 0)        
             Die();                    
 
         if(playerYPosition.position.y < -20)
