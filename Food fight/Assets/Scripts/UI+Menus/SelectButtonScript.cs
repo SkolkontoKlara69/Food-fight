@@ -34,7 +34,7 @@ public class SelectButtonScript : MonoBehaviour
         bool confirmExitActive = confirmExitObj.activeInHierarchy;
         bool pauseActive = pausObj.activeInHierarchy;
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
         {
             if (settingsActive)
             {
@@ -52,7 +52,7 @@ public class SelectButtonScript : MonoBehaviour
                 eventSystem.SetSelectedGameObject(firstConfirmExitButton, new BaseEventData(eventSystem));
 
             }
-            else if (pauseActive)
+            else
             {
                 eventSystem.SetSelectedGameObject(firstMenuButton, new BaseEventData(eventSystem));
             }
