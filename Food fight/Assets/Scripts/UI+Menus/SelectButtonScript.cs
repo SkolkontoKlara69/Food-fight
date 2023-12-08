@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SelectButtonScript : MonoBehaviour
 {
+    /*
     public Button firstMenuButton;
     public Button firstSettingsButton;
     GameObject settingsobj = GameObject.FindGameObjectWithTag("settings");
@@ -20,9 +21,9 @@ public class SelectButtonScript : MonoBehaviour
 
         if (settingsActive)
         {
-            firstMenuButton
+            //firstMenuButton
             firstSettingsButton.Select();
         }
     }
-
+    */
 }
