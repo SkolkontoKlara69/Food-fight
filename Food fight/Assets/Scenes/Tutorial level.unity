@@ -4523,6 +4523,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b79fdad2fb1e14c82e299982d4cfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstMenuButton: {fileID: 892148029}
+  firstSettingsButton: {fileID: 1862344466}
+  firstConfirmMenuButton: {fileID: 112475376}
+  firstConfirmExitButton: {fileID: 743664798}
+  eventSystem: {fileID: 1570384206}
 --- !u!1 &1144453682
 GameObject:
   m_ObjectHideFlags: 0
