@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 regularSize;
     public Vector2 crouchingSize;
 
+    public bool isCrouched;
+
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;
@@ -76,14 +78,28 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
+            isCrouched = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            isCrouched = false;
+        }
+
+        //för att spriten ska kunna offsettas: 
+        //offsetta spelarens och colliderns position uppåt till dit spriten är (kanske fungerar)
+        //eller:
+        //sätt spriten till ett child och offsetta childet (kanske fungerar)
+
+        if (isCrouched)
+        {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
             velocity = 5;
             jumpVelocity = 20;
             capsuleCollider.offset = new Vector2(0, -0.14f);
             spriteRenderer.sprite = crouched;
         }
-
-        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        else
         {
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
             velocity = 10;
@@ -105,11 +121,7 @@ public class PlayerMovement : MonoBehaviour
         {
             capsuleCollider.offset = new Vector2(0, -0.14f);
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
-        }
-        else if (!isTouchingGround)
-        {
-            capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
-            capsuleCollider.offset = new Vector2(0, 0);
+            //måste ha spriten för crouch här också
         }
 
         if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
@@ -127,12 +139,12 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
 
-        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround)
+        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround && !isTouchingRoof|| Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && !isTouchingRoof)
         {
             jump();
         }
 
-        if(Input.GetKeyDown(KeyCode.W) && standingOnEnemies || Input.GetKeyDown(KeyCode.UpArrow) && standingOnEnemies)
+        if(Input.GetKeyDown(KeyCode.W) && standingOnEnemies && !isTouchingRoof || Input.GetKeyDown(KeyCode.UpArrow) && standingOnEnemies && !isTouchingRoof)
         {
             jump();
         }

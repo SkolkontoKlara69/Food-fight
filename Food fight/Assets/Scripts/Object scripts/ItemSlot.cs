@@ -13,6 +13,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public Sprite emptySprite;
     public bool isFilled;
     public string itemDescription;
+    public ItemType itemType;
 
 
     //=====ITEM SLOT=====//
@@ -21,11 +22,10 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private Image itemImage;
 
+    //=====EQUIPED SLOTS======//
+    [SerializeField]
+    private EquippedSlot headSlot, swordSlot;
 
-    //=====ITEM DESCRIPTION SLOT=====//
-    public Image itemDescriptionImage;
-    public TMP_Text itemDescriptionText;
-    public TMP_Text itemDescriptionNameText;
 
 
     public GameObject selectedShader;
@@ -37,11 +37,12 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         inventoryScript = GameObject.Find("InventoryCanvas").GetComponent<InventoryScript>();
     }
 
-    public void AddItem(string itemName, string itemDescription, Sprite sprite)
+    public void AddItem(string itemName, string itemDescription, Sprite sprite, ItemType itemType)
     {
         this.itemName = itemName;
         this.itemSprite = sprite;
         this.itemDescription = itemDescription;
+        this.itemType = itemType;
 
         isFilled = true;
 
@@ -66,8 +67,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     {
         if (thisItemSelected)
         {
-            inventoryScript.UseItem(itemName);
-            EmptySlot();
+            EquipGear();
         }
 
         else
@@ -75,9 +75,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             inventoryScript.DeselectAllSlots();
             selectedShader.SetActive(true);
             thisItemSelected = true;
-            itemDescriptionNameText.text = itemName;
-            itemDescriptionText.text = itemDescription;
-            itemDescriptionImage.sprite = itemSprite;
         }
         
     }
@@ -86,11 +83,23 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     }
 
+    private void EquipGear()
+    {
+        if(itemType == ItemType.head)
+        {
+            headSlot.EquipGear(itemSprite, itemName, itemDescription);
+        }
+        if (itemType == ItemType.sword)
+        {
+            swordSlot.EquipGear(itemSprite, itemName, itemDescription);
+        }
+
+        EmptySlot();
+    }
+
     public void EmptySlot()
     {
         itemImage.sprite = emptySprite;
-        itemDescriptionNameText.text = "";
-        itemDescriptionText.text = "";
-        itemDescriptionImage.sprite = emptySprite;
+        isFilled = false;
     }
 }

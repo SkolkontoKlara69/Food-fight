@@ -13,6 +13,8 @@ public class Item : MonoBehaviour
     [SerializeField]
     private string itemDescription;
 
+    public ItemType itemType;
+
     private InventoryScript inventoryScript;
 
     // Start is called before the first frame update
@@ -25,7 +27,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            inventoryScript.AddItem(itemName, itemDescription, sprite);
+            inventoryScript.AddItem(itemName, itemDescription, sprite, itemType);
             Destroy(gameObject);
         }
     }
