@@ -12,12 +12,23 @@ public class PlayerAttack : MonoBehaviour
     public int attackDamage;
     public float attackReady = 1;
 
-    public UnityEvent CooldownChanged; 
+    private GameObject playerStatManager;
+
+    public UnityEvent CooldownChanged;
+
+    private void Awake()
+    {
+        playerStatManager = GameObject.Find("PlayerStatManager");
+    }
 
     // Update is called once per frame
     void Update()
     {
-        attackDamage = GameObject.Find("PlayerStatManager").GetComponent<PlayerStats>().damage;
+        if (playerStatManager != null)
+        {
+            attackDamage = playerStatManager.GetComponent<PlayerStats>().damage;
+        }
+
         if (attackReady == 1)
         {
             if (Input.GetKeyDown(KeyCode.Space))
