@@ -27,6 +27,8 @@ public class HealthController : MonoBehaviour
 
     public UnityEvent HealthChanged;
 
+    private float defence;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -53,6 +55,7 @@ public class HealthController : MonoBehaviour
             currentHealth = 0;
             HealthChanged.Invoke();
         }
+        defence = GameObject.Find("PlayerStatManager").GetComponent<PlayerStats>().defence;
     }
 
     public void TakeDamage(float damage)
@@ -65,7 +68,7 @@ public class HealthController : MonoBehaviour
 
         if (currentHealth != 0)
         {
-            currentHealth -= damage;
+            currentHealth -= (damage - defence);
             HealthChanged.Invoke();
             OnDamaged.Invoke();
         }
