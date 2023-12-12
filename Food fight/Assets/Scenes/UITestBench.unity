@@ -1399,7 +1399,6 @@ MonoBehaviour:
   equipedSlots:
   - {fileID: 1544217800}
   - {fileID: 549556183}
-  itemSOs: []
 --- !u!114 &214006865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6737,7 +6736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Item stats
+  m_text: 'Player stats
 
 '
   m_isRightToLeft: 0

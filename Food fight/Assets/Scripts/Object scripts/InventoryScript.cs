@@ -8,7 +8,6 @@ public class InventoryScript : MonoBehaviour
     private bool menuActivated;
     public ItemSlot[] itemSlot;
     public EquippedSlot[] equipedSlots;
-    public ItemSO[] itemSOs;
 
 
     // Update is called once per frame
@@ -34,18 +33,6 @@ public class InventoryScript : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
     }
-
-    public void UseItem(string itemName)
-    {
-        for (int i = 0; i < itemSOs.Length; i++)
-        {
-            if (itemSOs[i].itemname == itemName)
-            {
-                itemSOs[i].EquipItem();
-            }
-        }
-    }
-
     public void AddItem(string itemName, string itemDescription, Sprite itemSprite, ItemType itemType)
     {
         for (int i = 0; i < itemSlot.Length; i++)
