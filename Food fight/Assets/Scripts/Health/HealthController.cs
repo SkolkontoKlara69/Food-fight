@@ -111,7 +111,7 @@ public class HealthController : MonoBehaviour
     public void Die()
     {
         StartCoroutine(Respawned(0.5f));
-    }
+    }   
 
     IEnumerator Respawned(float duration)
     {
