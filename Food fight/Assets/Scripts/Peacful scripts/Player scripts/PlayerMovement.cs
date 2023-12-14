@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedFromEquipment = playerStatManager.GetComponent<PlayerStats>().health;
+        speedFromEquipment = playerStatManager.GetComponent<PlayerStats>().speed;
         /* if(transform.position.y >= 5f)
          {
              while (camera.transform.position.y != transform.position.y)
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         if (isCrouched)
         {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
-            velocity = 5 + speedFromEquipment - 10;
+            velocity = 5 + (speedFromEquipment - 10);
             jumpVelocity = 20;
             capsuleCollider.offset = new Vector2(0, -0.07f);
             spriteRenderer.sprite = crouched;
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
-            velocity = 10 + speedFromEquipment - 10;
+            velocity = 10 + (speedFromEquipment - 10);
             jumpVelocity = 20;
             capsuleCollider.offset = new Vector2(0, 0);
             spriteRenderer.sprite = idle;
