@@ -9,6 +9,7 @@ TagManager:
   - confirmMainMenu
   - confirmExit
   - settings
+  - mainMenu
   layers:
   - Default
   - TransparentFX
