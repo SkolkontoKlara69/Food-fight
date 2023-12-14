@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
     public Sprite idle;
     public Sprite crouched;
 
+    private GameObject playerStatManager;
+    private float speedFromEquipment;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,11 +64,17 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         cameraY = transform.position.y;
+
+        if (GameObject.Find("PlayerStatManager") != null)
+        {
+            playerStatManager = GameObject.Find("PlayerStatManager");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        speedFromEquipment = playerStatManager.GetComponent<PlayerStats>().health;
         /* if(transform.position.y >= 5f)
          {
              while (camera.transform.position.y != transform.position.y)
@@ -96,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         if (isCrouched)
         {
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
-            velocity = 5;
+            velocity = 5 + speedFromEquipment;
             jumpVelocity = 20;
             capsuleCollider.offset = new Vector2(0, -0.07f);
             spriteRenderer.sprite = crouched;
@@ -104,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
-            velocity = 10;
+            velocity = 10 + speedFromEquipment;
             jumpVelocity = 20;
             capsuleCollider.offset = new Vector2(0, 0);
             spriteRenderer.sprite = idle;
