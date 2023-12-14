@@ -61,7 +61,11 @@ public class HealthController : MonoBehaviour
             currentHealth = 0;
             HealthChanged.Invoke();
         }
-        defence = playerStatManager.GetComponent<PlayerStats>().defence;
+        
+        if (playerStatManager != null)
+        {
+            defence = playerStatManager.GetComponent<PlayerStats>().defence;
+        }
     }
 
     public void TakeDamage(float damage)
@@ -85,8 +89,7 @@ public class HealthController : MonoBehaviour
             //För ex. fiender ska det istället läggas in deras attacker och movement osv. 
         }
 
-        return;
-        
+        return;   
     }
 
     public void AddHealth(float addAmount)

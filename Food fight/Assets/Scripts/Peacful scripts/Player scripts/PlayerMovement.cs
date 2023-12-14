@@ -74,7 +74,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedFromEquipment = playerStatManager.GetComponent<PlayerStats>().speed;
+        if (playerStatManager != null)
+        {
+            speedFromEquipment = playerStatManager.GetComponent<PlayerStats>().speed;
+        }
+
         /* if(transform.position.y >= 5f)
          {
              while (camera.transform.position.y != transform.position.y)
