@@ -50,6 +50,7 @@ public class EquippedSlot : MonoBehaviour, IPointerClickHandler
     {
         if(eventData.button == PointerEventData.InputButton.Left)
         {
+            Debug.Log("Left click");
             OnLeftClick();
         }
         if (eventData.button == PointerEventData.InputButton.Right)
