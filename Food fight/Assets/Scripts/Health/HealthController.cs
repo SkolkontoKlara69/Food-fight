@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class HealthController : MonoBehaviour
 {
 
-    Vector2 startPos;
+    Vector2 checkPointPos;
 
     SpriteRenderer spriteRenderer;
 
@@ -41,7 +41,7 @@ public class HealthController : MonoBehaviour
     }
     public void Start()
     {
-        startPos = transform.position;
+        checkPointPos = transform.position;
     }
 
     public float remainingHealthPercentage
@@ -61,7 +61,11 @@ public class HealthController : MonoBehaviour
             currentHealth = 0;
             HealthChanged.Invoke();
         }
-        defence = playerStatManager.GetComponent<PlayerStats>().defence;
+        
+        if (playerStatManager != null)
+        {
+            defence = playerStatManager.GetComponent<PlayerStats>().defence;
+        }
     }
 
     public void TakeDamage(float damage)
@@ -85,8 +89,7 @@ public class HealthController : MonoBehaviour
             //För ex. fiender ska det istället läggas in deras attacker och movement osv. 
         }
 
-        return;
-        
+        return;   
     }
 
     public void AddHealth(float addAmount)
@@ -101,6 +104,10 @@ public class HealthController : MonoBehaviour
             currentHealth = maximumHealth;        
     }
 
+    public void UpdateCheckpoint(Vector2 pos)
+    {
+        checkPointPos = pos;
+    }
     public void Die()
     {
         StartCoroutine(Respawned(0.5f));
@@ -110,7 +117,7 @@ public class HealthController : MonoBehaviour
     {
         spriteRenderer.enabled = false;
         yield return new WaitForSeconds(duration);
-        transform.position = startPos;
+        transform.position = checkPointPos;
         spriteRenderer.enabled = true;        
         currentHealth = maximumHealth;
         HealthChanged.Invoke();
