@@ -33,19 +33,6 @@ public class InventoryScript : MonoBehaviour
             initialPress = false;
         }
     }
-
-    IEnumerator Open()
-    {
-        yield return new WaitForSeconds(1f);
-        
-    }
-    IEnumerator Close()
-    {
-        Debug.Log("close");
-        yield return new WaitForSeconds(0.001f);
-        Debug.Log("close");
-        
-    }
     public void AddItem(string itemName, string itemDescription, Sprite itemSprite, ItemType itemType)
     {
         for (int i = 0; i < itemSlot.Length; i++)
