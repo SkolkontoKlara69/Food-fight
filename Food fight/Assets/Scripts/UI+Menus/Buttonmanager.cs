@@ -85,4 +85,9 @@ public class Buttonmanager : MonoBehaviour
     {
         ShowButtons(settingsObjs, true);
     }
+
+    public void OnLevelSelectButton()
+    {
+        SceneManager.LoadScene("Level selector");
+    }
 }

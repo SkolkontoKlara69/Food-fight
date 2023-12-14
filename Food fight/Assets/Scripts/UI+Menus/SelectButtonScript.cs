@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class SelectButtonScript : MonoBehaviour
 {
-    public GameObject firstPauseButton;
+    public GameObject firstMenuButton;
     public GameObject firstSettingsButton;
     public GameObject firstConfirmMenuButton;
     public GameObject firstConfirmExitButton;
@@ -20,7 +20,7 @@ public class SelectButtonScript : MonoBehaviour
        confirmExitObj = GameObject.FindGameObjectWithTag("confirmExit");
        pauseObj = GameObject.FindGameObjectWithTag("PauseButton");
         */
-        eventSystem.firstSelectedGameObject = firstPauseButton;
+        eventSystem.firstSelectedGameObject = firstMenuButton;
     }
 
     public void Update()
@@ -28,7 +28,7 @@ public class SelectButtonScript : MonoBehaviour
         bool settingsActive = ItemActive(firstSettingsButton);
         bool confirmMenuActive = ItemActive(firstConfirmMenuButton);
         bool confirmExitActive = ItemActive(firstConfirmExitButton);
-        bool pauseActive = ItemActive(firstPauseButton);
+        bool pauseActive = ItemActive(firstMenuButton);
         
         
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
@@ -52,7 +52,7 @@ public class SelectButtonScript : MonoBehaviour
             }
             else
             {
-                eventSystem.SetSelectedGameObject(firstPauseButton, new BaseEventData(eventSystem));
+                eventSystem.SetSelectedGameObject(firstMenuButton, new BaseEventData(eventSystem));
             }
         }
         

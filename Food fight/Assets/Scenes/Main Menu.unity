@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b79fdad2fb1e14c82e299982d4cfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPauseButton: {fileID: 1598431286}
+  firstMenuButton: {fileID: 1598431286}
   firstSettingsButton: {fileID: 0}
   firstConfirmMenuButton: {fileID: 0}
   firstConfirmExitButton: {fileID: 250584441}
@@ -483,6 +483,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1427069117}
   - {fileID: 1618959347}
   m_Father: {fileID: 2084289653}
   m_RootOrder: 0
@@ -761,7 +762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -400}
+  m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: 300, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &465052562
@@ -996,7 +997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -800}
+  m_AnchoredPosition: {x: 0, y: -500}
   m_SizeDelta: {x: 300, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997199696
@@ -1506,12 +1507,12 @@ RectTransform:
   m_Children:
   - {fileID: 267476594}
   - {fileID: 250584445}
-  m_Father: {fileID: 1618959347}
-  m_RootOrder: 3
+  m_Father: {fileID: 303195222}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -636, y: -235}
+  m_AnchoredPosition: {x: -172.00003, y: -293}
   m_SizeDelta: {x: 655.3298, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427069118
@@ -1759,7 +1760,7 @@ GameObject:
   - component: {fileID: 1598431288}
   - component: {fileID: 1598431287}
   m_Layer: 5
-  m_Name: Continue Button
+  m_Name: Select level button
   m_TagString: PauseButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1811,7 +1812,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 175781564}
         m_TargetAssemblyTypeName: Buttonmanager, Assembly-CSharp
-        m_MethodName: OnContinuePress
+        m_MethodName: OnLevelSelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1877,7 +1878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1618959346
@@ -1911,13 +1912,12 @@ RectTransform:
   - {fileID: 1598431290}
   - {fileID: 465052561}
   - {fileID: 997199695}
-  - {fileID: 1427069117}
   m_Father: {fileID: 303195222}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 464, y: 0}
+  m_AnchoredPosition: {x: 464, y: -300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1623257667
@@ -1932,7 +1932,7 @@ GameObject:
   - component: {fileID: 1623257670}
   - component: {fileID: 1623257669}
   m_Layer: 5
-  m_Name: Continue game txt
+  m_Name: Select level txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1978,7 +1978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue game
+  m_text: Select level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
