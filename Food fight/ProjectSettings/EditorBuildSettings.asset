@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial level.unity
     guid: 65a99530578b7394ba984ab5a785afe2
+  - enabled: 1
+    path: Assets/Scenes/USA.unity
+    guid: 3e20f0dca6a708744b0c0316f6f202eb
+  - enabled: 1
+    path: Assets/Scenes/Japan.unity
+    guid: 49ea67e0251bef24da785714f4314f23
+  - enabled: 1
+    path: Assets/Scenes/French.unity
+    guid: 54020c1c1e6f12a49936b3db31763e4b
+  - enabled: 1
+    path: Assets/Scenes/London.unity
+    guid: 8f40ec78702a6bb4981d740db3e74cea
   m_configObjects: {}
