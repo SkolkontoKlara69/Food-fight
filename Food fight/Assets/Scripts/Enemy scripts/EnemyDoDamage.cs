@@ -11,6 +11,9 @@ public class EnemyDoDamage : MonoBehaviour
     {
         var healthController = collision.gameObject.GetComponent<HealthController>();
 
-        healthController.TakeDamage(damage);
+        if(healthController != null)
+        {
+            healthController.TakeDamage(damage);
+        }
     } 
 }

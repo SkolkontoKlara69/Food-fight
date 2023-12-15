@@ -51,11 +51,11 @@ public class AI_walking : MonoBehaviour
 
             if (destination == 0)
             {
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, movmentSpeed * Time.deltaTime);
-                if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
+                //transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, movmentSpeed * Time.deltaTime);
+                /*if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
                 {
                     destination = 1;
-                }
+                }*/
             }
             if (destination == 1)
             {
