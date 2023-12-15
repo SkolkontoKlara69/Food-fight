@@ -90,4 +90,29 @@ public class Buttonmanager : MonoBehaviour
     {
         SceneManager.LoadScene("Level selector");
     }
+
+    //Select level buttons
+    public void OnTutorialSelected()
+    {
+        SceneManager.LoadScene("Tutorial level");
+    }
+
+    public void OnUSASelected()
+    {
+        SceneManager.LoadScene("USA");
+    }
+
+    public void OnJapanSelected()
+    {
+        SceneManager.LoadScene("Japan");
+    }
+
+    public void OnFranceSelected()
+    {
+        SceneManager.LoadScene("French");
+    }
+    public void OnLondonSelected()
+    {
+        SceneManager.LoadScene("London");
+    }
 }
