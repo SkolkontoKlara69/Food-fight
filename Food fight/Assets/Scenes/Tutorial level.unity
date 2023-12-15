@@ -15793,6 +15793,10 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1570384208}
+    - target: {fileID: -4193871656052927482, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard&Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 2994065520825524417, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
       propertyPath: HealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
