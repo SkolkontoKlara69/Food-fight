@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class PlayerAttack : MonoBehaviour
 
     public UnityEvent CooldownChanged;
 
+    private PlayerInput playerInput;
+
     private void Awake()
     {
         playerStatManager = GameObject.Find("PlayerStatManager");
+        playerInput = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (attackReady == 1)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (playerInput.actions["Fire"].triggered)
             {
                 Attack();
                 //StartCoroutine(AttackCooldown()); denna behövs inte längre
