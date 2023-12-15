@@ -10,6 +10,7 @@ public class SelectButtonScript : MonoBehaviour
     public GameObject firstSettingsButton;
     public GameObject firstConfirmMenuButton;
     public GameObject firstConfirmExitButton;
+    GameObject[] pauseButtons;
     public EventSystem eventSystem;
 
     void Start()
@@ -21,6 +22,8 @@ public class SelectButtonScript : MonoBehaviour
        pauseObj = GameObject.FindGameObjectWithTag("PauseButton");
         */
         eventSystem.firstSelectedGameObject = firstMenuButton;
+
+        pauseButtons = GameObject.FindGameObjectsWithTag("PauseButton");
     }
 
     public void Update()
@@ -53,6 +56,11 @@ public class SelectButtonScript : MonoBehaviour
             else
             {
                 eventSystem.SetSelectedGameObject(firstMenuButton, new BaseEventData(eventSystem));
+                
+                for (int i = 0; i < pauseButtons.Length; i++)
+                {
+                    pauseButtons[i].SetActive(true);
+                }
             }
         }
         

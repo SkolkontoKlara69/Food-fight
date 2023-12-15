@@ -63,6 +63,7 @@ public class Buttonmanager : MonoBehaviour
         ShowButtons(confirmExitButtons, false);
         ShowButtons(confirmMainMenuButtons, false);
         ShowButtons(pauseButtons, true);
+        ShowButtons(settingsObjs, false);
     }
 
     //Exit related buttons
@@ -84,6 +85,7 @@ public class Buttonmanager : MonoBehaviour
     public void OnSettingsPress()
     {
         ShowButtons(settingsObjs, true);
+        ShowButtons(pauseButtons, false);
     }
 
     public void OnLevelSelectButton()
