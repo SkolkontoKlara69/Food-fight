@@ -15793,13 +15793,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ugn
       objectReference: {fileID: 0}
+    - target: {fileID: 2413237098612439951, guid: d58017f7d1a8d244e8214981e9321112, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3891043641910980382, guid: d58017f7d1a8d244e8214981e9321112, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3891043641910980382, guid: d58017f7d1a8d244e8214981e9321112, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.859985
+      value: 58.96
       objectReference: {fileID: 0}
     - target: {fileID: 3891043641910980382, guid: d58017f7d1a8d244e8214981e9321112, type: 3}
       propertyPath: m_LocalPosition.y
