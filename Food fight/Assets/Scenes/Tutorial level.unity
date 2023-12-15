@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2994065520825524423, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
   m_PrefabInstance: {fileID: 2994065520535489805}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1086871405}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 488e0ad9b3ef96b4bae1b05f0b1137d7, type: 3}
@@ -4039,6 +4039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 733655970}
+  firstInventorySlot: {fileID: 0}
+  eventSystem: {fileID: 0}
   itemSlot:
   - {fileID: 721498601}
   - {fileID: 153427451}
@@ -8339,6 +8341,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2548af5299a5f1479e181f128642d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1086871405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2994065520825524426, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+  m_PrefabInstance: {fileID: 2994065520535489805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1086871414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086871405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 1570384208}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &1105182770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15785,18 +15822,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_UIInputModule
-      value: 
-      objectReference: {fileID: 1570384208}
-    - target: {fileID: 0}
-      propertyPath: m_DefaultControlScheme
-      value: Keyboard&Mouse
-      objectReference: {fileID: 0}
     - target: {fileID: 2994065520825524417, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
       propertyPath: HealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
