@@ -1621,10 +1621,10 @@ MonoBehaviour:
   defence: 0
   damage: 30
   speed: 10
-  healthText: {fileID: 0}
-  defenceText: {fileID: 0}
-  damageText: {fileID: 0}
-  speedText: {fileID: 0}
+  healthText: {fileID: 1617771025}
+  defenceText: {fileID: 733793509}
+  damageText: {fileID: 1919348785}
+  speedText: {fileID: 65166145}
 --- !u!4 &178683362
 Transform:
   m_ObjectHideFlags: 0
