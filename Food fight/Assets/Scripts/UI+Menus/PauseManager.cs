@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PauseManager : MonoBehaviour
 {
@@ -9,14 +10,12 @@ public class PauseManager : MonoBehaviour
     public bool paused;
     public bool settingsMenu;
 
-    //vilken knapp som ska tryckas ned (just nu P)
-    public KeyCode pauseKey;
-
-
     public UnityEvent OnPause;
 
     public GameObject pauseMenu;
     public GameObject settingsMenuObj;
+
+    private PlayerInput playerInput;
 
     /// För att lägga in ett villkor i en annan kod för att bero på om spelet är pausat gör man såhär:
     /// 1. lägg in: 
@@ -44,14 +43,15 @@ public class PauseManager : MonoBehaviour
     {
         paused = false;
         settingsMenuObj.SetActive(false);
-        //Default pauseknapp
-        pauseKey = KeyCode.P;
+
+        playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(pauseKey))
+        if (playerInput.actions["MenuOpenClose"].triggered)
         {
             //Varför invokas den inte??????
             OnPause.Invoke();
