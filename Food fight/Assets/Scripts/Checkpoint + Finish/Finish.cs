@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
+
 
 public class Finish : MonoBehaviour
 {
@@ -19,8 +21,7 @@ public class Finish : MonoBehaviour
     }
 
     IEnumerator Finsish(float duration)
-    {
-       
+    {       
         yield return new WaitForSeconds(duration);       
         SceneController.instance.NextLevel();
     }
