@@ -1383,6 +1383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 354135824}
+  firstInventorySlot: {fileID: 1313893241}
+  eventSystem: {fileID: 1330418393}
   itemSlot:
   - {fileID: 5466530098129551653}
   - {fileID: 1953725762}
@@ -6607,8 +6609,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2041397225}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9140,8 +9141,8 @@ RectTransform:
   m_Children:
   - {fileID: 885028354}
   - {fileID: 692378014}
-  m_Father: {fileID: 1330418394}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

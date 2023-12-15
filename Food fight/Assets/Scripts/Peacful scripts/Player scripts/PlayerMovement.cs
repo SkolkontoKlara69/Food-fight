@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
             isCrouched = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.S) && !paused || Input.GetKeyUp(KeyCode.DownArrow) && !paused)
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
         {
             isCrouched = false;
         }

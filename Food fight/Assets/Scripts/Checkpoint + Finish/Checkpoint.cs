@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour
 
     private void Awake()
     {
-        healthController = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>();      
+        healthController = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>();       
         coll = GetComponent<Collider2D>();
     }
 
