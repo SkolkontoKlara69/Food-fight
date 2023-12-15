@@ -19,8 +19,6 @@ public class PlayerAttack : MonoBehaviour
 
     private PlayerInput playerInput;
 
-    private bool paused;
-
     private void Awake()
     {
         playerStatManager = GameObject.Find("PlayerStatManager");
@@ -30,8 +28,6 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        paused = GameObject.FindGameObjectWithTag("PauseManager").GetComponent<PauseManager>().paused;
-
         if (playerStatManager != null)
         {
             attackDamage = playerStatManager.GetComponent<PlayerStats>().damage;
