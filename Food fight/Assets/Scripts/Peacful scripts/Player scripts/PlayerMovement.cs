@@ -48,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     private GameObject playerStatManager;
     private float speedFromEquipment;
 
+    private bool paused;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        paused = GameObject.FindGameObjectWithTag("PauseManager").GetComponent<PauseManager>().paused;
+
         if (playerStatManager != null)
         {
             speedFromEquipment = playerStatManager.GetComponent<PlayerStats>().speed;
@@ -89,12 +93,12 @@ public class PlayerMovement : MonoBehaviour
              camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, 3.28f, cameraOffset.z);
         */
 
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S) && !paused || Input.GetKeyDown(KeyCode.DownArrow) && !paused)
         {
             isCrouched = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.S) && !paused || Input.GetKeyUp(KeyCode.DownArrow) && !paused)
         {
             isCrouched = false;
         }
@@ -140,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
             velocity = 5;
         }
 
-        if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight || isFacingRight && Input.GetAxisRaw("Horizontal") < 0)
+        if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight && !paused || isFacingRight && Input.GetAxisRaw("Horizontal") < 0 && !paused)
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
@@ -155,12 +159,12 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
 
-        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround && !isTouchingRoof|| Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && !isTouchingRoof)
+        if (Input.GetKeyDown(KeyCode.W) && isTouchingGround && !isTouchingRoof && !paused || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && !isTouchingRoof && !paused)
         {
             jump();
         }
 
-        if(Input.GetKeyDown(KeyCode.W) && standingOnEnemies && !isTouchingRoof || Input.GetKeyDown(KeyCode.UpArrow) && standingOnEnemies && !isTouchingRoof)
+        if (Input.GetKeyDown(KeyCode.W) && standingOnEnemies && !isTouchingRoof && !paused || Input.GetKeyDown(KeyCode.UpArrow) && standingOnEnemies && !isTouchingRoof && !paused)
         {
             jump();
         }
