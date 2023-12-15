@@ -15785,15 +15785,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4193871656052927482, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_Actions
       value: 
       objectReference: {fileID: -944628639613478452, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
-    - target: {fileID: -4193871656052927482, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1570384208}
-    - target: {fileID: -4193871656052927482, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_DefaultControlScheme
       value: Keyboard&Mouse
       objectReference: {fileID: 0}
