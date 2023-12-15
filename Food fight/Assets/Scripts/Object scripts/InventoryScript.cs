@@ -1,10 +1,13 @@
   using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InventoryScript : MonoBehaviour
 {
     public GameObject InventoryMenu;
+    public GameObject firstInventorySlot;
+    public EventSystem eventSystem;
     private bool menuActivated;
     private bool initialPress;
     public ItemSlot[] itemSlot;
@@ -15,7 +18,7 @@ public class InventoryScript : MonoBehaviour
     private void Update()
     {
         if (Input.GetButton("Inventory") && menuActivated && !initialPress)
-        {
+        { 
             InventoryMenu.SetActive(false);
             menuActivated = false;
             Time.timeScale = 1;
@@ -23,6 +26,7 @@ public class InventoryScript : MonoBehaviour
         }
         else if (Input.GetButton("Inventory") && !menuActivated && !initialPress)
         {
+            eventSystem.firstSelectedGameObject = firstInventorySlot;
             InventoryMenu.SetActive(true);
             menuActivated = true;
             Time.timeScale = 0;
