@@ -6,14 +6,13 @@ public class Checkpoint : MonoBehaviour
 {
     HealthController healthController;
 
-    SpriteRenderer spriteRenderer;
-    public Sprite passive, active;
+    SpriteRenderer spriteRenderer;    
+    public Animator animator;
     Collider2D coll;
 
     private void Awake()
     {
-        healthController = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        healthController = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>();      
         coll = GetComponent<Collider2D>();
     }
 
@@ -22,7 +21,7 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             healthController.UpdateCheckpoint(transform.position);
-            spriteRenderer.sprite = active;
+            animator.SetBool("PlayerHasTouched", true);
             coll.enabled = false;
         }
     }
