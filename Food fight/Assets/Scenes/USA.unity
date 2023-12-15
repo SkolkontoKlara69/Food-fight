@@ -133,6 +133,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9096777292972458207, guid: e113c0d3d235b66419433ebec34dbc72, type: 3}
   m_PrefabInstance: {fileID: 2114557880}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &287781228
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 376216396334056205, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.596448
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0992113
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 376216396334056207, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 118ca5747cf7aa349a24ef684cc32207, type: 3}
 --- !u!1001 &317952816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -499,7 +556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1086965977
 MonoBehaviour:
@@ -558,7 +615,7 @@ Transform:
   - {fileID: 1843412972}
   - {fileID: 1446680277}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1373055428 stripped
 Transform:
@@ -886,64 +943,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3554166156295381154
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3554166157020930822, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_Name
-      value: "Flaggst\xE5ng"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930823, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: passive
-      value: 
-      objectReference: {fileID: 21300000, guid: 404a946f5e179c14f9010ab277d0520d, type: 3}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.405961
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554166157020930826, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8cafc8ca6ffb3634c9a7d0b414ba1e45, type: 3}
