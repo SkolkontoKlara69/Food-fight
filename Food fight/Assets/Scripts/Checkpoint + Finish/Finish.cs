@@ -17,6 +17,7 @@ public class Finish : MonoBehaviour
         {
             animator.SetBool("PlayerHasThouchedFinish", true);
             StartCoroutine(Finsish(duration));
+
         }
     }
 

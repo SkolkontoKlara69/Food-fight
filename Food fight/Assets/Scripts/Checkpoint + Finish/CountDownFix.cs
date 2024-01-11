@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CountDown : MonoBehaviour
+public class CountDownFix : MonoBehaviour
 {
     [SerializeField]
     private float startTime;
@@ -11,7 +11,9 @@ public class CountDown : MonoBehaviour
     private float timeFromStart;
     private float writenTime;
 
-    public TextMeshPro timeLeftText;
+    public TextMeshPro timeLeftText;  
+
+    // Update is called once per frame
     void Update()
     {
         timeFromStart = Time.deltaTime;
