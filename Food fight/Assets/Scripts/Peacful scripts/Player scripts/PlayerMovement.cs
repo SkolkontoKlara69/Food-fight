@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -48,7 +49,10 @@ public class PlayerMovement : MonoBehaviour
     private GameObject playerStatManager;
     private float speedFromEquipment;
 
-    private bool paused;
+    public bool paused;
+
+
+    private PlayerInput playerInput;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
         {
             playerStatManager = GameObject.Find("PlayerStatManager");
         }
+
+        playerInput = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -93,12 +99,16 @@ public class PlayerMovement : MonoBehaviour
              camera.transform.position = new Vector3(transform.position.x * cameraOffset.x + 6.37f, 3.28f, cameraOffset.z);
         */
 
-        if (Input.GetKeyDown(KeyCode.S) && !paused || Input.GetKeyDown(KeyCode.DownArrow) && !paused)
+
+        Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
+
+        // Kontrollera om "Up" är nedtryckt
+        if (moveInput.y < 0.0f && !paused)
         {
             isCrouched = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        if (moveInput.y > 0.0f)
         {
             isCrouched = false;
         }
