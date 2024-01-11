@@ -4039,8 +4039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 733655970}
-  firstInventorySlot: {fileID: 0}
-  eventSystem: {fileID: 0}
+  firstInventorySlot: {fileID: 1196732271}
+  eventSystem: {fileID: 1570384206}
   itemSlot:
   - {fileID: 721498601}
   - {fileID: 153427451}
@@ -5609,7 +5609,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8215546236707929996, guid: f898314fcd47d4248bfc2abef009af53, type: 3}
   m_PrefabInstance: {fileID: 721498599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1196732271}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2548af5299a5f1479e181f128642d09, type: 3}
@@ -8989,6 +8989,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2548af5299a5f1479e181f128642d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1196732271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5466530098808670307, guid: f898314fcd47d4248bfc2abef009af53, type: 3}
+  m_PrefabInstance: {fileID: 721498599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1198215609
 GameObject:
   m_ObjectHideFlags: 0
