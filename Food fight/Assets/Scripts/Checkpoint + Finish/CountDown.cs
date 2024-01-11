@@ -11,7 +11,7 @@ public class CountDown : MonoBehaviour
     private float timeFromStart;
     private float writenTime;
 
-    public TextMeshPro timeLeftText;
+    public TextMesh timeLeftText;
     void Update()
     {
         timeFromStart = Time.deltaTime;

@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 101134668}
+  finnishCanvas: {fileID: 2089368364397889545}
   duration: 13
 --- !u!212 &101134667
 SpriteRenderer:
@@ -263,7 +264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101134664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.12, y: 0.5988564, z: 0.24993302}
+  m_LocalPosition: {x: -2.85, y: 0.5988564, z: 0.24993302}
   m_LocalScale: {x: 12, y: 12, z: 12}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -843,6 +844,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9096777292972458207, guid: e113c0d3d235b66419433ebec34dbc72, type: 3}
   m_PrefabInstance: {fileID: 385062042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1521754125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521754127}
+  - component: {fileID: 1521754126}
+  m_Layer: 0
+  m_Name: PauseManager
+  m_TagString: PauseManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1521754126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521754125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e613ad764f5131d4aaef0f3c6a7d4d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  settingsMenu: 0
+  OnPause:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  pauseMenu: {fileID: 0}
+  settingsMenuObj: {fileID: 0}
+--- !u!4 &1521754127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521754125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.9964, y: 4.678772, z: -458.5814}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1575959431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1239,13 +1303,14 @@ GameObject:
   - component: {fileID: 2089368364397889548}
   - component: {fileID: 2089368364397889551}
   - component: {fileID: 2089368364397889550}
+  - component: {fileID: 2089368364397889552}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!223 &2089368364397889548
 Canvas:
   m_ObjectHideFlags: 0
@@ -1332,6 +1397,20 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &2089368364397889552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089368364397889545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b49fda70c81c894fb545447a79734a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 13
+  timeLeftText: {fileID: 2089368364511053512}
 --- !u!114 &2089368364511053512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,7 +1694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8067384, b: 0.44716978, a: 0.64705884}
+  m_Color: {r: 1, g: 0.8067384, b: 0.44716978, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
