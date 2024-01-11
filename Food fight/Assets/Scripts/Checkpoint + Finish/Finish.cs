@@ -8,6 +8,7 @@ using TMPro;
 public class Finish : MonoBehaviour
 {
     public Animator animator;
+    public GameObject finnishCanvas;
 
     [SerializeField]
     private float duration;
@@ -17,7 +18,7 @@ public class Finish : MonoBehaviour
         {
             animator.SetBool("PlayerHasThouchedFinish", true);
             StartCoroutine(Finsish(duration));
-
+            finnishCanvas.SetActive(true);
         }
     }
 

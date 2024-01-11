@@ -11,13 +11,18 @@ public class CountDownFix : MonoBehaviour
     private float timeFromStart;
     private float writenTime;
 
-    public TextMeshPro timeLeftText;  
+    public TextMeshProUGUI timeLeftText;
+
+    private void Start()
+    {
+        writenTime = startTime;        
+    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        timeFromStart = Time.deltaTime;
-        writenTime = (startTime - timeFromStart);
+        timeFromStart += 0.019f;
+        writenTime = startTime - Mathf.RoundToInt(timeFromStart);
         timeLeftText.text = writenTime.ToString();
     }
 }
