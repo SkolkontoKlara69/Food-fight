@@ -103,12 +103,12 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
 
         // Kontrollera om "Up" är nedtryckt
-        if (moveInput.y < 0.0f && !paused)
+        if (Input.GetKeyDown(KeyCode.S) && !paused)
         {
             isCrouched = true;
         }
 
-        if (moveInput.y > 0.0f)
+        if (Input.GetKeyUp(KeyCode.S) && !paused)
         {
             isCrouched = false;
         }
