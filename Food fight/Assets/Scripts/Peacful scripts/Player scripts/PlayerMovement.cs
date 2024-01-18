@@ -167,6 +167,12 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
 
+
+        if (moveInput.y > 0.0f && isTouchingGround && !isTouchingRoof && !paused || moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
+        {
+            jump();
+        }
+/*
         if (Input.GetKeyDown(KeyCode.W) && isTouchingGround && !isTouchingRoof && !paused || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && !isTouchingRoof && !paused)
         {
             jump();
@@ -176,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump();
         }
-
+*/
         if (player.velocity.y > 0)     
             player.gravityScale = gravityScale;        
         else        
