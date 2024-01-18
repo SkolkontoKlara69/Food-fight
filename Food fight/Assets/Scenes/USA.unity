@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 101134668}
   finnishCanvas: {fileID: 2089368364397889545}
+  movementScript: {fileID: 0}
   duration: 13
 --- !u!212 &101134667
 SpriteRenderer:
@@ -587,6 +588,14 @@ PrefabInstance:
     - target: {fileID: 2994065520825524420, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994065520825524423, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1086965975}
+    - target: {fileID: 2994065520825524423, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2994065520825524426, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
       propertyPath: m_Name
