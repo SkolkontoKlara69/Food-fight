@@ -102,13 +102,11 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
 
-        // Kontrollera om "Up" är nedtryckt
-        if (Input.GetKeyDown(KeyCode.S) && !paused)
+        // Kontrollera om "Ned" är nedtryckt
+        if (moveInput.y < 0.0f && !paused)
         {
             isCrouched = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.S) && !paused)
+        }else //om vi vill att det ska vara toggle-crouch istället så lägg till if(moveInput.y > 0.0f && !paused) här
         {
             isCrouched = false;
         }
@@ -168,6 +166,13 @@ public class PlayerMovement : MonoBehaviour
 
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
+
+        /*
+        if (moveInput.y > 0.0f && isTouchingGround && !isTouchingRoof && !paused || moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
+        {
+            jump();
+        }
+        */
 
         if (Input.GetKeyDown(KeyCode.W) && isTouchingGround && !isTouchingRoof && !paused || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && !isTouchingRoof && !paused)
         {
