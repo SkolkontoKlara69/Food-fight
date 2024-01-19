@@ -628,13 +628,14 @@ GameObject:
   - component: {fileID: 2062113590}
   - component: {fileID: 2062113589}
   - component: {fileID: 2062113588}
+  - component: {fileID: 6871286405242933882}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2062113591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -721,6 +722,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6871286405242933882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062113587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b49fda70c81c894fb545447a79734a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 13
+  timeLeftText: {fileID: 1167562226}
 --- !u!1 &2089368365525000818
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +749,6 @@ GameObject:
   - component: {fileID: 2089368365525000817}
   - component: {fileID: 2089368365525000816}
   - component: {fileID: 2089368365525000819}
-  - component: {fileID: 6802850515377507057}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -843,6 +857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2089368365525000822}
+  finnishCanvas: {fileID: 2062113587}
+  movementScript: {fileID: 0}
   duration: 13
 --- !u!61 &2089368365525000819
 BoxCollider2D:
@@ -870,17 +886,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.102557525, y: 0.677735}
   m_EdgeRadius: 0
---- !u!114 &6802850515377507057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089368365525000818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27268f3dda2257e4982926ef81ec9932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTime: 13
-  timeLeftText: {fileID: 0}
