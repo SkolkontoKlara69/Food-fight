@@ -51,8 +51,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool paused;
 
-
     private PlayerInput playerInput;
+
+    private bool jumpReady;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +78,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         playerInput = GetComponent<PlayerInput>();
+
+        jumpReady = true;
     }
 
     // Update is called once per frame
@@ -167,13 +170,14 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
 
-        /*
-        if (moveInput.y > 0.0f && isTouchingGround && !isTouchingRoof && !paused || moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
+        if (moveInput.y > 0.0f && jumpReady == true && isTouchingGround && !isTouchingRoof && !paused || jumpReady == true && moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
         {
             jump();
-        }
-        */
 
+            StartCoroutine(JumpCooldown());
+        }
+
+        /*
         if (Input.GetKeyDown(KeyCode.W) && isTouchingGround && !isTouchingRoof && !paused || Input.GetKeyDown(KeyCode.UpArrow) && isTouchingGround && !isTouchingRoof && !paused)
         {
             jump();
@@ -183,6 +187,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump();
         }
+        */
 
         if (player.velocity.y > 0)     
             player.gravityScale = gravityScale;        
@@ -193,5 +198,12 @@ public class PlayerMovement : MonoBehaviour
     public void jump()
     {
         player.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse); 
+    }
+
+    private IEnumerator JumpCooldown()
+    {
+        jumpReady = false;
+        yield return new WaitForSeconds(0.3f);
+        jumpReady = true;
     }
 }
