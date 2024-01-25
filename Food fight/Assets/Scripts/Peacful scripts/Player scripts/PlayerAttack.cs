@@ -57,6 +57,7 @@ public class PlayerAttack : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
+            Debug.Log("Enemy detected at position: " + enemy.transform.position); 
             enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
     }
