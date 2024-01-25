@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
             velocity = 5;
         }
 
-        if (Input.GetAxisRaw("Horizontal") > 0 && !isFacingRight && !paused || isFacingRight && Input.GetAxisRaw("Horizontal") < 0 && !paused)
+        if (moveInput.x > 0 && !isFacingRight && !paused || isFacingRight && moveInput.x < 0 && !paused)
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
@@ -160,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
 
-        move = Input.GetAxis("Horizontal");
+        move = moveInput.x;
 
         player.velocity = new Vector2(velocity * move, player.velocity.y);
 
