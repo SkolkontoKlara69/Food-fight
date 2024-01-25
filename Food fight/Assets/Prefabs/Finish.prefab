@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b49fda70c81c894fb545447a79734a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 13
+  startTime: 10
   timeLeftText: {fileID: 1167562226}
 --- !u!1 &2089368365525000818
 GameObject:
@@ -859,7 +859,7 @@ MonoBehaviour:
   animator: {fileID: 2089368365525000822}
   finnishCanvas: {fileID: 2062113587}
   movementScript: {fileID: 0}
-  duration: 13
+  duration: 10
 --- !u!61 &2089368365525000819
 BoxCollider2D:
   m_ObjectHideFlags: 0

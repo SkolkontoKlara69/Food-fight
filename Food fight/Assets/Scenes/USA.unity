@@ -183,8 +183,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 101134668}
   finnishCanvas: {fileID: 2089368364397889545}
-  movementScript: {fileID: 0}
-  duration: 13
+  movementScript: {fileID: 1373055436}
+  rb2d: {fileID: 1373055430}
+  duration: 10
 --- !u!212 &101134667
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -849,6 +850,22 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1086965975}
+--- !u!50 &1373055430 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2994065520825524445, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+  m_PrefabInstance: {fileID: 544563841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1373055436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2994065520825524423, guid: 51b17c16831007f48855b4af205fb0ea, type: 3}
+  m_PrefabInstance: {fileID: 544563841}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181032603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488e0ad9b3ef96b4bae1b05f0b1137d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1446680277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9096777292972458207, guid: e113c0d3d235b66419433ebec34dbc72, type: 3}
@@ -1419,7 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b49fda70c81c894fb545447a79734a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 13
+  startTime: 10
   timeLeftText: {fileID: 2089368364511053512}
 --- !u!114 &2089368364511053512
 MonoBehaviour:

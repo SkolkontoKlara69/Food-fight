@@ -16480,6 +16480,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2089368365525000816, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 2000300729389559110}
+    - target: {fileID: 2089368365525000816, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
+      propertyPath: movementScript
+      value: 
+      objectReference: {fileID: 315600330}
     - target: {fileID: 2089368365525000818, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
       propertyPath: m_Name
       value: Finish
@@ -18799,6 +18807,11 @@ PrefabInstance:
       objectReference: {fileID: 2059275427}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+--- !u!50 &2000300729389559110 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2000300729100107925, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 2000300729389559109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3982921143915906125
 PrefabInstance:
   m_ObjectHideFlags: 0
