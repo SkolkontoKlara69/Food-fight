@@ -10,9 +10,10 @@ public class SelectButtonScript : MonoBehaviour
     public GameObject firstSettingsButton;
     public GameObject firstConfirmMenuButton;
     public GameObject firstConfirmExitButton;
+    public GameObject firstInventoryButton;
     GameObject[] pauseButtons;
     public EventSystem eventSystem;
-
+     
     void Start()
     {
         /*
@@ -32,6 +33,7 @@ public class SelectButtonScript : MonoBehaviour
         bool confirmMenuActive = ItemActive(firstConfirmMenuButton);
         bool confirmExitActive = ItemActive(firstConfirmExitButton);
         bool pauseActive = ItemActive(firstMenuButton);
+        bool inventoryActive = ItemActive(firstInventoryButton);
         
         
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
@@ -52,6 +54,9 @@ public class SelectButtonScript : MonoBehaviour
             {
                 eventSystem.SetSelectedGameObject(firstConfirmExitButton, new BaseEventData(eventSystem));
 
+            }else if (inventoryActive && firstInventoryButton != null)
+            {
+                eventSystem.SetSelectedGameObject(firstInventoryButton, new BaseEventData(eventSystem));
             }
             else
             {
