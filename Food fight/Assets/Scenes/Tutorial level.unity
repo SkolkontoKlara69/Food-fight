@@ -10163,6 +10163,7 @@ MonoBehaviour:
   firstSettingsButton: {fileID: 2052480539}
   firstConfirmMenuButton: {fileID: 112475376}
   firstConfirmExitButton: {fileID: 743664798}
+  firstInventoryButton: {fileID: 1196732271}
   eventSystem: {fileID: 1570384206}
 --- !u!224 &1143908894 stripped
 RectTransform:
