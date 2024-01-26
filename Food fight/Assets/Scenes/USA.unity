@@ -183,8 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 101134668}
   finnishCanvas: {fileID: 2089368364397889545}
-  movementScript: {fileID: 0}
-  rb2d: {fileID: 0}
+  movementScript: {fileID: 1964160189}
+  rb2d: {fileID: 1964160184}
   duration: 10
 --- !u!212 &101134667
 SpriteRenderer:
@@ -760,7 +760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7287037331547377264, guid: d79dda7b75e84f540b55a2bfcb4c15aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.98271084
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 7287037331547377264, guid: d79dda7b75e84f540b55a2bfcb4c15aa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1079,6 +1079,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2000300729100107916, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
   m_PrefabInstance: {fileID: 267313505}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1964160184 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2000300729100107925, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 267313505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1964160189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 267313505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488e0ad9b3ef96b4bae1b05f0b1137d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2083471364
 PrefabInstance:
   m_ObjectHideFlags: 0
