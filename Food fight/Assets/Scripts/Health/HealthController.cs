@@ -51,6 +51,7 @@ public class HealthController : MonoBehaviour
             return currentHealth / maximumHealth;
         }
     }
+
     public void Update()
     {
         if (currentHealth <= 0)        
