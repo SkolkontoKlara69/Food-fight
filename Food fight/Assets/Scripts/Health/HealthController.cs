@@ -31,6 +31,11 @@ public class HealthController : MonoBehaviour
 
     private float defence = 0f;
 
+    public GameObject damageCanvas;
+
+    [SerializeField]
+    private float flashDuration;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -41,7 +46,7 @@ public class HealthController : MonoBehaviour
     }
     public void Start()
     {
-        checkPointPos = transform.position;
+        checkPointPos = transform.position;        
     }
 
     public float remainingHealthPercentage
@@ -81,6 +86,7 @@ public class HealthController : MonoBehaviour
             currentHealth -= (damage - defence);
             HealthChanged.Invoke();
             OnDamaged.Invoke();
+            StartCoroutine(DamageScreen(flashDuration));
         }
         else
         {
@@ -113,6 +119,7 @@ public class HealthController : MonoBehaviour
         StartCoroutine(Respawned(0.5f));
     }   
 
+
     IEnumerator Respawned(float duration)
     {
         spriteRenderer.enabled = false;
@@ -121,5 +128,12 @@ public class HealthController : MonoBehaviour
         spriteRenderer.enabled = true;        
         currentHealth = maximumHealth;
         HealthChanged.Invoke();
+    }
+
+    IEnumerator DamageScreen(float flashDuration)
+    {
+        damageCanvas.SetActive(true);
+        yield return new WaitForSeconds(flashDuration);
+        damageCanvas.SetActive(false);
     }
 }
