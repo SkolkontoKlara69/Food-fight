@@ -1822,9 +1822,9 @@ MonoBehaviour:
   jumpVelocity: 20
   regularSizeX: 0.25
   regularSizeY: 0.62
-  crouchingSizeY: 0.27
+  crouchingSizeY: 0
   regularSize: {x: 0.25, y: 0.62}
-  crouchingSize: {x: 0.09, y: 0.28}
+  crouchingSize: {x: 0, y: 0}
   isCrouched: 0
   groundCheck: {fileID: 385717410}
   groundCheckRadius: 0.5
@@ -1833,7 +1833,7 @@ MonoBehaviour:
     m_Bits: 64
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   isTouchingGround: 0
   standingOnEnemies: 0
   roofCheck1: {fileID: 1174604520}
@@ -1850,7 +1850,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 315600328}
   idle: {fileID: 21300000, guid: 0d009d107fccca44ab09aba2232fac5a, type: 3}
   crouched: {fileID: 21300000, guid: 2015da15ff57b2243915f52bd164cd6f, type: 3}
-  paused: 0
 --- !u!114 &315600331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5877,69 +5876,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1184344705
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1184344707}
-  - component: {fileID: 1184344706}
-  m_Layer: 0
-  m_Name: PauseManager
-  m_TagString: PauseManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1184344706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184344705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e613ad764f5131d4aaef0f3c6a7d4d47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paused: 0
-  settingsMenu: 0
-  OnPause:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 0
-  pauseMenu: {fileID: 0}
-  settingsMenuObj: {fileID: 0}
---- !u!4 &1184344707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184344705}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64.9964, y: 4.678772, z: -458.5814}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1201307743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8419,63 +8355,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741489933}
   m_CullTransparentMesh: 1
---- !u!1001 &1776710689
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 22.866165
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.7249758
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.01815522
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392688908, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292372868392689395, guid: b14244f091493204f849c39db83febce, type: 3}
-      propertyPath: m_Name
-      value: Game manager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b14244f091493204f849c39db83febce, type: 3}
 --- !u!1 &1796490469
 GameObject:
   m_ObjectHideFlags: 0
