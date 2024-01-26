@@ -4805,6 +4805,7 @@ GameObject:
   - component: {fileID: 516550822}
   - component: {fileID: 516550821}
   - component: {fileID: 516550820}
+  - component: {fileID: 516550826}
   m_Layer: 5
   m_Name: InventoryCanvas
   m_TagString: Untagged
@@ -4940,6 +4941,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &516550826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516550819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d13068f53efac4a8e78d1b98875f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 1
 --- !u!1001 &518972927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6054,6 +6068,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632600701}
   m_CullTransparentMesh: 1
+--- !u!1 &633246082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633246083}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &633246083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633246082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634341797
 GameObject:
   m_ObjectHideFlags: 0
@@ -16484,6 +16529,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 591201747, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
@@ -16508,6 +16554,12 @@ PrefabInstance:
       propertyPath: movementScript
       value: 
       objectReference: {fileID: 315600330}
+=======
+    - target: {fileID: 2089368365525000816, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 315600329}
+>>>>>>> Stashed changes
     - target: {fileID: 2089368365525000818, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
       propertyPath: m_Name
       value: Finish
