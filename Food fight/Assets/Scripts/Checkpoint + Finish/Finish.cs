@@ -37,7 +37,7 @@ public class Finish : MonoBehaviour
 
     IEnumerator Finsish(float duration)
     {       
-        yield return new WaitForSeconds(duration);       
+        yield return new WaitForSeconds(duration);
         SceneController.instance.NextLevel();
     }
 
