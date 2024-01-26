@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth;
-    public int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
     SpriteRenderer spriteRenderer;
     public Transform enemyYPosition;
+
+    [SerializeField] private EnemyHealthBar healthBar;
+
+    public UnityEvent EnemyHealthChanged; 
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+
+        healthBar.UpdateHealthBar(EnemyHealth);
     }
 
     public void TakeDamage(int damage)
@@ -20,7 +27,15 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
 
         if(currentHealth <= 0)       
-            Die();        
+            Die();
+    }
+
+    public float remainingHealthPercentage
+    {
+        get
+        {
+            return currentHealth / maxHealth;
+        }
     }
 
     public void Update()
