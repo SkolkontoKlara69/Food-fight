@@ -334,6 +334,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageCanvas: {fileID: 0}
+  flashDuration: 0.25
 --- !u!114 &2000300729100107918
 MonoBehaviour:
   m_ObjectHideFlags: 0

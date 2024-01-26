@@ -18,17 +18,16 @@ public class Finish : MonoBehaviour
   
     private float waitingTime = 2;
 
-    private bool compleet = false;
+    private bool complete = false;
     private void Start()
-    {
-        
+    {        
         movementScript = GameObject.Find("Player (2)").GetComponent<PlayerMovement>();        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {       
         if (collision.CompareTag("Player"))
         {
-            compleet = true;
+            complete = true;
             animator.SetBool("PlayerHasThouchedFinish", true);
             StartCoroutine(Finsish(duration));
             finnishCanvas.SetActive(true);
@@ -43,11 +42,11 @@ public class Finish : MonoBehaviour
 
     private void Update()
     {
-        if(compleet == true)
+        if(complete == true)
         {
             movementScript.enabled = !movementScript.enabled;
             rb2d.velocity = new Vector2(0, 0);
-            compleet = false;
+            complete = false;
         }
     }
 }

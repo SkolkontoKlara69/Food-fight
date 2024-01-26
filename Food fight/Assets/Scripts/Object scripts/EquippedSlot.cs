@@ -59,7 +59,7 @@ public class EquippedSlot : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    void OnLeftClick()
+     public void OnLeftClick()
     {
         if (thisItemSelected && slotInUse)
             UnEquipGear();
