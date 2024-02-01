@@ -3374,6 +3374,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2089368365525000816, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 1223227453}
     - target: {fileID: 2089368365525000818, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
       propertyPath: m_Name
       value: Finish
@@ -6600,6 +6604,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarSprite: {fileID: 662895512}
   reduceSpeed: 2
+  target: 0
+  currentHealth: 0
+  maxHealth: 0
 --- !u!224 &1192394857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6783,6 +6790,11 @@ MonoBehaviour:
 --- !u!4 &1223227450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2000300729100107916, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 1223227448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1223227453 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2000300729100107925, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
   m_PrefabInstance: {fileID: 1223227448}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224685968
