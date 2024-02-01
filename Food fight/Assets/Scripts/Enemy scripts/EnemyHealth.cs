@@ -12,8 +12,6 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] private EnemyHealthBar healthBar;
 
-    public UnityEvent EnemyHealthChanged; 
-
     // Start is called before the first frame update 
     void Start()
     {
