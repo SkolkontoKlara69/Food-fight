@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class InventoryScript : MonoBehaviour
 {
@@ -13,18 +14,24 @@ public class InventoryScript : MonoBehaviour
     public ItemSlot[] itemSlot;
     public EquippedSlot[] equipedSlots;
 
+    private PlayerInput playerInput;
+
+    private void Start()
+    {
+        playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
+    }
 
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetButton("Inventory") && menuActivated && !initialPress)
+        if (playerInput.actions["Open&Close Inventory"].triggered && menuActivated && !initialPress)
         { 
             InventoryMenu.SetActive(false);
             menuActivated = false;
             Time.timeScale = 1;
             initialPress = true;
         }
-        else if (Input.GetButton("Inventory") && !menuActivated && !initialPress)
+        else if (playerInput.actions["Open&Close Inventory"].triggered && !menuActivated && !initialPress)
         {
             eventSystem.firstSelectedGameObject = firstInventorySlot;
             InventoryMenu.SetActive(true);
@@ -32,7 +39,7 @@ public class InventoryScript : MonoBehaviour
             Time.timeScale = 0;
             initialPress = true;
         }
-        if (!Input.GetButton("Inventory"))
+        if (!playerInput.actions["Open&Close Inventory"].triggered) 
         {
             initialPress = false;
         }
