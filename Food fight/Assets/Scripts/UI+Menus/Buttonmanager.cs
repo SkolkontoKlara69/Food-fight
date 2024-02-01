@@ -12,6 +12,10 @@ public class Buttonmanager : MonoBehaviour
     GameObject[] confirmMainMenuButtons;
     GameObject[] confirmExitButtons;
     GameObject[] settingsObjs;
+    GameObject[] settingsCategoryButtons;
+    GameObject[] rebindButtons;
+    GameObject[] audioButtons;
+    GameObject[] movementButtons;
 
     GameObject pauseManager;
 
@@ -22,6 +26,10 @@ public class Buttonmanager : MonoBehaviour
         pauseManager = GameObject.FindGameObjectWithTag("PauseManager");
         confirmExitButtons = GameObject.FindGameObjectsWithTag("confirmExit");
         settingsObjs = GameObject.FindGameObjectsWithTag("settings");
+        settingsCategoryButtons = GameObject.FindGameObjectsWithTag("settingsCategory");
+        rebindButtons = GameObject.FindGameObjectsWithTag("rebind");
+        audioButtons = GameObject.FindGameObjectsWithTag("audio");
+        movementButtons = GameObject.FindGameObjectsWithTag("movementSettings");
     }
     public void Start()
     {
@@ -30,6 +38,10 @@ public class Buttonmanager : MonoBehaviour
         ShowButtons(confirmMainMenuButtons, false);
         ShowButtons(confirmExitButtons, false);
         ShowButtons(settingsObjs, false);
+        ShowButtons(settingsCategoryButtons, false);
+        ShowButtons(rebindButtons, false);
+        ShowButtons(audioButtons, false);
+        ShowButtons(movementButtons, false);
     }
 
     public void OnContinuePress()
@@ -85,7 +97,30 @@ public class Buttonmanager : MonoBehaviour
     public void OnSettingsPress()
     {
         ShowButtons(settingsObjs, true);
+        ShowButtons(settingsCategoryButtons, true);
         ShowButtons(pauseButtons, false);
+
+        ShowButtons(rebindButtons, false);
+        ShowButtons(audioButtons, false);
+        ShowButtons(movementButtons, false);
+    }
+
+    public void OnRebindCategoryPress()
+    {
+        ShowButtons(settingsCategoryButtons, false);
+        ShowButtons(rebindButtons, true);
+    }
+
+    public void OnAudioCategoryPress()
+    {
+        ShowButtons(settingsCategoryButtons, false);
+        ShowButtons(audioButtons, true);
+    }
+
+    public void OnMovementCategoryPress()
+    {
+        ShowButtons(settingsCategoryButtons, false);
+        ShowButtons(movementButtons, true);
     }
 
     public void OnLevelSelectButton()

@@ -11,6 +11,9 @@ public class SelectButtonScript : MonoBehaviour
     public GameObject firstConfirmMenuButton;
     public GameObject firstConfirmExitButton;
     public GameObject firstInventoryButton;
+    public GameObject firstRebindButton;
+    public GameObject firstAudioButton;
+    public GameObject firstMovementButton;
     GameObject[] pauseButtons;
     public EventSystem eventSystem;
      
@@ -30,6 +33,9 @@ public class SelectButtonScript : MonoBehaviour
     public void Update()
     {
         bool settingsActive = ItemActive(firstSettingsButton);
+        bool rebindSettingsActive = ItemActive(firstRebindButton);
+        bool audioSettingsActive = ItemActive(firstAudioButton);
+        bool movementSettingsActive = ItemActive(firstMovementButton);
         bool confirmMenuActive = ItemActive(firstConfirmMenuButton);
         bool confirmExitActive = ItemActive(firstConfirmExitButton);
         bool pauseActive = ItemActive(firstMenuButton);
@@ -38,7 +44,24 @@ public class SelectButtonScript : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
         {
-            if (settingsActive && firstSettingsButton != null)
+            if (audioSettingsActive && firstAudioButton != null)
+            {
+
+                eventSystem.SetSelectedGameObject(firstAudioButton, new BaseEventData(eventSystem));
+
+            }
+            else if (movementSettingsActive && firstMovementButton != null)
+            {
+
+                eventSystem.SetSelectedGameObject(firstMovementButton, new BaseEventData(eventSystem));
+
+            }
+            else if (rebindSettingsActive && firstRebindButton != null)
+            {
+
+                eventSystem.SetSelectedGameObject(firstRebindButton, new BaseEventData(eventSystem));
+
+            }else if (settingsActive && firstSettingsButton != null && !rebindSettingsActive && !movementSettingsActive && !audioSettingsActive)
             {
 
                 eventSystem.SetSelectedGameObject(firstSettingsButton, new BaseEventData(eventSystem));
