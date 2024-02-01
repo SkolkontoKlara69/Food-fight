@@ -18,8 +18,6 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-
-        healthBar.UpdateHealthBar(EnemyHealth);
     }
 
     public void TakeDamage(int damage)

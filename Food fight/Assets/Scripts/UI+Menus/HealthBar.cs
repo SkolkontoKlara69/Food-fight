@@ -15,6 +15,8 @@ public class HealthBar : MonoBehaviour
     {
         target = healthController.remainingHealthPercentage;
 
+        Debug.Log(healthController.remainingHealthPercentage);
+
         //healthBarRöd.fillAmount = Mathf.MoveTowards(healthBarRöd.fillAmount, healthController.remainingHealthPercentage, reduceSpeed * Time.deltaTime);
 
         //healthBarRöd.fillAmount = healthController.remainingHealthPercentage;

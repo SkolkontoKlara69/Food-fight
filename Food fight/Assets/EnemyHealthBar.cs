@@ -11,12 +11,13 @@ public class EnemyHealthBar : MonoBehaviour
 
     public void UpdateHealthBar(EnemyHealth enemyHealth)
     {
-        target = enemyHealth.currentHealth;
+        target = enemyHealth.remainingHealthPercentage;
     }
 
     // Update is called once per frame
     void Update()
     {
         healthBarSprite.fillAmount = Mathf.MoveTowards(healthBarSprite.fillAmount, target, reduceSpeed * Time.deltaTime);
+
     }
 }
