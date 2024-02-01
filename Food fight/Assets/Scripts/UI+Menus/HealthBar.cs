@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField]
-    private UnityEngine.UI.Image healthBarRöd;
+    private UnityEngine.UI.Image healthBarRöd; 
 
     [SerializeField]
     private float reduceSpeed = 2;
