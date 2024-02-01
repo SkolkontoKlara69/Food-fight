@@ -51,7 +51,7 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerInput.actions["MenuOpenClose"].triggered)
+        if (playerInput.actions["Open&Close Menu"].triggered)
         {
             //Varför invokas den inte??????
             OnPause.Invoke();
