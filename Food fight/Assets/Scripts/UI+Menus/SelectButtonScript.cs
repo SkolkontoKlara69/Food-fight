@@ -107,4 +107,8 @@ public class SelectButtonScript : MonoBehaviour
     }
         
     
+    public void OnRebind()
+    {
+        eventSystem.SetSelectedGameObject(null);
+    }
 }

@@ -10,6 +10,7 @@ public class Finish : MonoBehaviour
     public Animator animator;
     public GameObject finnishCanvas;
     public PlayerMovement movementScript;
+    public AudioSource audioSource;
 
     public Rigidbody2D rb2d;
 
@@ -29,6 +30,7 @@ public class Finish : MonoBehaviour
         {
             complete = true;
             animator.SetBool("PlayerHasThouchedFinish", true);
+            audioSource.Play();
             StartCoroutine(Finsish(duration));
             finnishCanvas.SetActive(true);
         }
