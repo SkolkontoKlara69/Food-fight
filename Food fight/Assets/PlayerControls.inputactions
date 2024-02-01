@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory Open Close",
+                    "name": "Open&Close Inventory",
                     "type": "Button",
                     "id": "161ea657-e408-4cf4-b586-3aca9f0833cc",
                     "expectedControlType": "Button",
@@ -226,7 +226,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Inventory Open Close",
+                    "action": "Open&Close Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -237,7 +237,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory Open Close",
+                    "action": "Open&Close Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

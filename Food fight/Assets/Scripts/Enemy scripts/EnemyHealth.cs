@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
 
     public UnityEvent EnemyHealthChanged; 
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     void Start()
     {
         currentHealth = maxHealth;
