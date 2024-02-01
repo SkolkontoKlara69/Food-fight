@@ -53,7 +53,11 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerInput playerInput;
 
-    private bool jumpReady;
+    public bool jumpReady;
+
+    public bool doubleJumpEnabled = true;
+
+    public float jumpsRemaining;
 
     // Start is called before the first frame update
     void Start()
@@ -170,11 +174,28 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
 
-        if (moveInput.y > 0.0f && jumpReady == true && isTouchingGround && !isTouchingRoof && !paused || jumpReady == true && moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
+        if (!doubleJumpEnabled)
         {
-            jump();
+            if (moveInput.y > 0.0f && jumpReady == true && isTouchingGround && !isTouchingRoof && !paused || jumpReady == true && moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
+            {
+                jump();
+                StartCoroutine(JumpCooldown());
+            }
+        }
 
-            StartCoroutine(JumpCooldown());
+        if (doubleJumpEnabled)
+        {
+            if(moveInput.y > 0.0f && jumpReady && isTouchingGround && !isTouchingRoof && !paused || moveInput.y > 0.0f && jumpReady && standingOnEnemies && isTouchingRoof && !paused)
+            {
+                jump();
+                StartCoroutine(DoubleJumpCooldown());
+            }
+
+            if(moveInput.y > 0.0f && !paused && !isTouchingRoof && jumpsRemaining == 1 && jumpReady)
+            {
+                jump();
+                StartCoroutine(JumpCooldown());
+            }
         }
 
         /*
@@ -200,10 +221,20 @@ public class PlayerMovement : MonoBehaviour
         player.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse); 
     }
 
+    private IEnumerator DoubleJumpCooldown()
+    {
+        jumpReady = false;
+        jumpsRemaining = 1;
+        yield return new WaitForSeconds(0.25f);
+        jumpReady = true;
+    }
+
     private IEnumerator JumpCooldown()
     {
         jumpReady = false;
+        jumpsRemaining = 0;
         yield return new WaitForSeconds(0.3f);
         jumpReady = true;
+        jumpsRemaining = 2;
     }
 }
