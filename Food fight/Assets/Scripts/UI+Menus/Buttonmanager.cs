@@ -152,4 +152,14 @@ public class Buttonmanager : MonoBehaviour
     {
         SceneManager.LoadScene("London");
     }
+
+    public void OnRebindStart()
+    {
+        ShowButtons(rebindButtons, false);
+    }
+
+    public void OnRebindStop()
+    {
+        ShowButtons(rebindButtons, true);
+    }
 }
