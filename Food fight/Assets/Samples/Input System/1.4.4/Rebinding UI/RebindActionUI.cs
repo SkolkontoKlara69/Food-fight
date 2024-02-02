@@ -17,6 +17,9 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         /// <summary>
         /// Reference to the action that is to be rebound.
         /// </summary>
+        /// 
+
+
         public InputActionReference actionReference
         {
             get => m_Action;
@@ -132,6 +135,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                     m_RebindStartEvent = new InteractiveRebindEvent();
                 return m_RebindStartEvent;
             }
+
+           
         }
 
         /// <summary>
@@ -254,7 +259,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
 
         private void PerformInteractiveRebind(InputAction action, int bindingIndex, bool allCompositeParts = false)
         {
-            m_RebindOperation?.Cancel(); // Will null out m_RebindOperation.
+           
+           m_RebindOperation?.Cancel(); // Will null out m_RebindOperation.
 
             
             void CleanUp()
