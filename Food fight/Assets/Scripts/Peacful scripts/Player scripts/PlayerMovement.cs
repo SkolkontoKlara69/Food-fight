@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -59,6 +60,13 @@ public class PlayerMovement : MonoBehaviour
 
     public float jumpsRemaining;
 
+    [Header("Toggle crouch")]
+    public bool toggleCrouch;
+    public bool isCrouching;
+    public Toggle crouchToggle;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -109,15 +117,23 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
 
-        // Kontrollera om "Ned" är nedtryckt
-        if (moveInput.y < 0.0f && !paused)
+        //Om det är toggle crouch så ändrar den bara om man crouchar eller inte. Om man istället inte har toggle crouch så crouchar den bara ifall man trycker på knappen
+        if (toggleCrouch == true)
+        {
+            if (moveInput.y < 0.0f && !paused)
+            {
+                isCrouched = !isCrouched;
+            }
+
+        }
+        else if (moveInput.y < 0.0f && !paused)
         {
             isCrouched = true;
-        }else //om vi vill att det ska vara toggle-crouch istället så lägg till if(moveInput.y > 0.0f && !paused) här
+        }
+        else //om vi vill att det ska vara toggle-crouch istället så lägg till if(moveInput.y > 0.0f && !paused) här
         {
             isCrouched = false;
         }
-
         //för att spriten ska kunna offsettas: 
         //offsetta spelarens och colliderns position uppåt till dit spriten är (kanske fungerar)
         //eller:
