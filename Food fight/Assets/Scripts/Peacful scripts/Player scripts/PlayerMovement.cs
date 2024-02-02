@@ -97,6 +97,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (doubleJumpEnabled && standingOnEnemies)
+        {
+            jumpsRemaining = 1;
+        }
+
         paused = GameObject.FindGameObjectWithTag("PauseManager").GetComponent<PauseManager>().paused;
 
         if (playerStatManager != null)
@@ -203,14 +208,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if(moveInput.y > 0.0f && jumpReady && isTouchingGround && !isTouchingRoof && !paused || moveInput.y > 0.0f && jumpReady && standingOnEnemies && isTouchingRoof && !paused)
             {
-                jump();
-                StartCoroutine(DoubleJumpCooldown());
+                jump(); 
+                StartCoroutine(DoubleJumpCooldown()); 
             }
 
-            if(moveInput.y > 0.0f && !paused && !isTouchingRoof && jumpsRemaining == 1 && jumpReady)
+            if(moveInput.y > 0.0f && !paused && !isTouchingRoof && jumpsRemaining == 1 && jumpReady || moveInput.y > 0.0f && !paused && standingOnEnemies && jumpsRemaining == 1 && jumpReady)
             {
-                jump();
-                StartCoroutine(JumpCooldown());
+                jump(); 
+                StartCoroutine(JumpCooldown()); 
             }
         }
 
