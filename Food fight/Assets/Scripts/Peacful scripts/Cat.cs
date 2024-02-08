@@ -29,6 +29,6 @@ public class Cat : MonoBehaviour
             offest = new Vector3(-5, -2, 0);
         }
         playerX = player.transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, playerX - offest, 0.5f);
+        transform.position = Vector3.MoveTowards(transform.position, playerX - offest, 1f);
     }
 }
