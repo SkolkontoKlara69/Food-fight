@@ -31,6 +31,8 @@ public class HealthController : MonoBehaviour
 
     private float defence = 0f;
 
+    public int voidDepth;
+
     public GameObject damageCanvas;
 
     [SerializeField]
@@ -62,7 +64,7 @@ public class HealthController : MonoBehaviour
         if (currentHealth <= 0)        
             Die();                    
 
-        if(playerYPosition.position.y < -20)
+        if(playerYPosition.position.y < voidDepth)
         {
             currentHealth = 0;
             HealthChanged.Invoke();
