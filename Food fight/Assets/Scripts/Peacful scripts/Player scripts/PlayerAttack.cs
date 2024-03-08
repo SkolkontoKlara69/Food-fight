@@ -19,6 +19,9 @@ public class PlayerAttack : MonoBehaviour
 
     private PlayerInput playerInput;
 
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+
     private void Awake()
     {
         playerStatManager = GameObject.Find("PlayerStatManager");
@@ -52,7 +55,8 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack(){
         //Attack animation här
-
+        audioSource.clip = hitSound;
+        audioSource.Play();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach(Collider2D enemy in hitEnemies)

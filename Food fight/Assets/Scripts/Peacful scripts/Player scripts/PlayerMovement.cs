@@ -52,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool paused;
 
+
+
     private PlayerInput playerInput;
 
     public bool jumpReady;
@@ -65,11 +67,18 @@ public class PlayerMovement : MonoBehaviour
     public bool isCrouching;
     public Toggle crouchToggle;
 
+    [Header("Audio controls")]
+    public AudioSource audioSource;
+    public AudioClip jumpSound;
+    public AudioClip doubleJumpSound;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+
         player = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
 
@@ -199,6 +208,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (moveInput.y > 0.0f && jumpReady == true && isTouchingGround && !isTouchingRoof && !paused || jumpReady == true && moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
             {
+                audioSource.clip = jumpSound;
+                audioSource.Play();
                 jump();
                 StartCoroutine(JumpCooldown());
             }
@@ -208,12 +219,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if(moveInput.y > 0.0f && jumpReady && isTouchingGround && !isTouchingRoof && !paused || moveInput.y > 0.0f && jumpReady && standingOnEnemies && isTouchingRoof && !paused)
             {
+                audioSource.clip = jumpSound;
+                audioSource.Play();
                 jump(); 
                 StartCoroutine(DoubleJumpCooldown()); 
             }
 
             if(moveInput.y > 0.0f && !paused && !isTouchingRoof && jumpsRemaining == 1 && jumpReady || moveInput.y > 0.0f && !paused && standingOnEnemies && jumpsRemaining == 1 && jumpReady)
             {
+                audioSource.clip = doubleJumpSound;
+                audioSource.Play();
                 jump(); 
                 StartCoroutine(JumpCooldown()); 
             }
@@ -239,7 +254,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void jump()
     {
-        player.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse); 
+        player.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
     }
 
     private IEnumerator DoubleJumpCooldown()
