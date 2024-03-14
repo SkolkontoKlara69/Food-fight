@@ -20193,6 +20193,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5153304543718495778, guid: 4a083ff041df3a045a302f1b6da19041, type: 3}
   m_PrefabInstance: {fileID: 1475795016}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &2072686105 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8467115543134042844, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 2000300729389559109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2077477259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20762,13 +20767,25 @@ PrefabInstance:
       value: Player (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729100107913, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: voidDepth
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000300729100107913, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: HealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 761850536}
     - target: {fileID: 2000300729100107915, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 68b2a7d7fc9709647a05cd64063422cf, type: 3}
+    - target: {fileID: 2000300729100107915, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: attackRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2000300729100107915, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2072686105}
     - target: {fileID: 2000300729100107915, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: CooldownChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -20822,6 +20839,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059275427}
     - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 14dd6a75ab4bdf7459227a4baa3cd0fe, type: 3}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2072686105}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: crouchToggle
       value: 
       objectReference: {fileID: 865241448}
@@ -20829,6 +20854,10 @@ PrefabInstance:
       propertyPath: toggleCrouch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: doubleJumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 75e2df41c8e8cb1458c6257072ea470d, type: 3}
     - target: {fileID: 2000300729967475734, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.193
