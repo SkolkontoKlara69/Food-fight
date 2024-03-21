@@ -11941,6 +11941,10 @@ PrefabInstance:
       value: Player (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729100107913, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: voidDepth
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000300729100107913, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: damageCanvas
       value: 
       objectReference: {fileID: 860568632}
