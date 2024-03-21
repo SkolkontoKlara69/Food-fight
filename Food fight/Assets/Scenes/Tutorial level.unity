@@ -10255,8 +10255,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033885875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.9418, y: 14.5925, z: 0}
-  m_LocalScale: {x: 46.972393, y: 17.291039, z: 1.327}
+  m_LocalPosition: {x: 12.9418, y: 15.3817, z: 0}
+  m_LocalScale: {x: 46.972393, y: 15.712366, z: 1.327}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -20620,6 +20620,10 @@ PrefabInstance:
       propertyPath: doubleJumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 75e2df41c8e8cb1458c6257072ea470d, type: 3}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: doubleJumpEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2000300729967475734, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.193
