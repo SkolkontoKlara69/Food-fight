@@ -12503,9 +12503,9 @@ Transform:
   m_Children:
   - {fileID: 387777077}
   - {fileID: 38139319}
-  - {fileID: 10518460}
   - {fileID: 897101752}
   - {fileID: 675299484}
+  - {fileID: 10518460}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21874,6 +21874,18 @@ PrefabInstance:
     - target: {fileID: 1536549991084082358, guid: e5cdb2e10af53384fabaab27162d0b0a, type: 3}
       propertyPath: m_Name
       value: Tiles-Block (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656841804664313253, guid: e5cdb2e10af53384fabaab27162d0b0a, type: 3}
+      propertyPath: m_Size.x
+      value: 18.267595
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656841804664313253, guid: e5cdb2e10af53384fabaab27162d0b0a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.015206337
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656841804664313253, guid: e5cdb2e10af53384fabaab27162d0b0a, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 18.22029
       objectReference: {fileID: 0}
     - target: {fileID: 7096002622688339398, guid: e5cdb2e10af53384fabaab27162d0b0a, type: 3}
       propertyPath: m_RootOrder
