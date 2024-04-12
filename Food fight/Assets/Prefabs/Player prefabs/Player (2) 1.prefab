@@ -269,8 +269,9 @@ MonoBehaviour:
   isCrouching: 0
   crouchToggle: {fileID: 0}
   audioSource: {fileID: 8467115543134042844}
-  jumpSound: {fileID: 8300000, guid: 14dd6a75ab4bdf7459227a4baa3cd0fe, type: 3}
-  doubleJumpSound: {fileID: 8300000, guid: 75e2df41c8e8cb1458c6257072ea470d, type: 3}
+  jumpSound: {fileID: 8300000, guid: 7a10d42cccc33b34a9520ce0bdb57cc5, type: 3}
+  doubleJumpSound: {fileID: 8300000, guid: 70b765cd05347f440b9a2fdf4f3fa3d2, type: 3}
+  animator: {fileID: 0}
 --- !u!114 &2000300729100107913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +398,7 @@ MonoBehaviour:
         m_CallState: 2
   audioSource: {fileID: 8467115543134042844}
   hitSound: {fileID: 8300000, guid: 68b2a7d7fc9709647a05cd64063422cf, type: 3}
+  animator: {fileID: 0}
 --- !u!114 &2000300729100107912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +446,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.01, y: -0.14}
   m_Size: {x: 0.25, y: 0.62}
   m_Direction: 0
 --- !u!114 &2000300728327895603

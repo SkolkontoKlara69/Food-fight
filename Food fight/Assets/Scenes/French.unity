@@ -4244,22 +4244,6 @@ PrefabInstance:
       propertyPath: HealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpdateHealthBar
       objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107914, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: m_Size.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107914, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: m_Size.y
-      value: 0.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107914, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107914, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.14
-      objectReference: {fileID: 0}
     - target: {fileID: 2000300729100107915, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: hitSound
       value: 
@@ -4335,30 +4319,6 @@ PrefabInstance:
     - target: {fileID: 2000300729100107917, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 14dd6a75ab4bdf7459227a4baa3cd0fe, type: 3}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 1673102893}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: doubleJumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 75e2df41c8e8cb1458c6257072ea470d, type: 3}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: doubleJumpEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: groundCheckRadius
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729163954663, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.y
