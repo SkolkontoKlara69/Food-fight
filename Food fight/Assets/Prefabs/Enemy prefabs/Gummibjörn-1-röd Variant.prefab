@@ -403,11 +403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.616287
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.87023616
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -419,15 +419,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -480,8 +480,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 2.982706
+  m_UseAutoMass: 0
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

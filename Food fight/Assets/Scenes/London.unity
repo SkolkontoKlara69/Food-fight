@@ -12019,7 +12019,7 @@ PrefabInstance:
     - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: jumpSound
       value: 
-      objectReference: {fileID: 8300000, guid: 14dd6a75ab4bdf7459227a4baa3cd0fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 7a10d42cccc33b34a9520ce0bdb57cc5, type: 3}
     - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: audioSource
       value: 
@@ -12027,7 +12027,7 @@ PrefabInstance:
     - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: doubleJumpSound
       value: 
-      objectReference: {fileID: 8300000, guid: 75e2df41c8e8cb1458c6257072ea470d, type: 3}
+      objectReference: {fileID: 8300000, guid: 70b765cd05347f440b9a2fdf4f3fa3d2, type: 3}
     - target: {fileID: 2000300729967475734, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.193
