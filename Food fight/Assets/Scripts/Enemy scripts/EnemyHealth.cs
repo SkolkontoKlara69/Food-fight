@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public float currentHealth;
     SpriteRenderer spriteRenderer;
     public Transform enemyYPosition;
+    private Rigidbody2D rb;
 
     [SerializeField] private EnemyHealthBar healthBar;
 
@@ -16,11 +17,13 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        rb.AddForce(new Vector2(15*this.transform.localScale.x/15, 15), ForceMode2D.Impulse);
 
         if(currentHealth <= 0)       
             Die();
