@@ -73,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip doubleJumpSound;
 
 
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +103,8 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
 
         jumpReady = true;
+
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -143,11 +147,15 @@ public class PlayerMovement : MonoBehaviour
         else if (moveInput.y < 0.0f && !paused)
         {
             isCrouched = true;
+
         }
         else //om vi vill att det ska vara toggle-crouch istället så lägg till if(moveInput.y > 0.0f && !paused) här
         {
             isCrouched = false;
         }
+
+        animator.SetBool("IsCrouching", isCrouched);
+
         //för att spriten ska kunna offsettas: 
         //offsetta spelarens och colliderns position uppåt till dit spriten är (kanske fungerar)
         //eller:
