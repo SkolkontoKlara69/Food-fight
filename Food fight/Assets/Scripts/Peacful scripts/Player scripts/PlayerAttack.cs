@@ -22,10 +22,13 @@ public class PlayerAttack : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip hitSound;
 
+    public Animator animator;
+
     private void Awake()
     {
         playerStatManager = GameObject.Find("PlayerStatManager");
         playerInput = GetComponent<PlayerInput>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (playerInput.actions["Fire"].triggered)
             {
+                
                 Attack();
                 //StartCoroutine(AttackCooldown()); denna behövs inte längre
                 attackReady = 0;
@@ -54,7 +58,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
     void Attack(){
-        //Attack animation här
+        animator.SetTrigger("Hit");
         audioSource.clip = hitSound;
         audioSource.Play();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -64,6 +68,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Enemy detected at position: " + enemy.transform.position); 
             enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
+
     }
 
     private void OnDrawGizmosSelected()
