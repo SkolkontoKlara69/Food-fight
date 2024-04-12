@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetUtanVapen
+      name: Spritesheet_-_utan_vapen_0
       rect:
         serializedVersion: 2
         x: 0
@@ -310,9 +310,9 @@ TextureImporter:
       Spritesheet_-_utan_vapen_4: 370875509
       Spritesheet_-_utan_vapen_1: -889330930
       Spritesheet_-_utan_vapen_7: 789972629
+      Spritesheet_-_utan_vapen_0: -897586582
       Spritesheet_-_utan_vapen_5: -453060024
       Spritesheet_-_utan_vapen_6: -495274394
-      SpritesheetUtanVapen: -897586582
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
