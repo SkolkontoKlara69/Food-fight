@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
             velocity = 5 + (speedFromEquipment - 10);
             jumpVelocity = 20;
-            capsuleCollider.offset = new Vector2(0, -0.07f);
+            capsuleCollider.offset = new Vector2(0, -0.27f);
             spriteRenderer.sprite = crouched;
         }
         else
@@ -176,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
             capsuleCollider.size = new Vector2(regularSizeX, regularSizeY);
             velocity = 10 + (speedFromEquipment - 10);
             jumpVelocity = 20;
-            capsuleCollider.offset = new Vector2(0, 0);
+            capsuleCollider.offset = new Vector2(0, -0.12f);
             spriteRenderer.sprite = idle;
         }
 

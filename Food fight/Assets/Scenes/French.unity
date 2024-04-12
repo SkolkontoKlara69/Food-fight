@@ -4290,7 +4290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729100107916, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.021612644
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729100107916, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4326,7 +4326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729100107917, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729100107917, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_Sprite
@@ -4359,6 +4359,10 @@ PrefabInstance:
     - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: groundCheckRadius
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000300729163954663, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.446
       objectReference: {fileID: 0}
     - target: {fileID: 2000300729967475734, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.x
