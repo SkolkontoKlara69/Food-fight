@@ -42,10 +42,11 @@ public class SelectButtonScript : MonoBehaviour
         bool inventoryActive = ItemActive(firstInventoryButton);
         
         
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.I))
         {
+            Debug.Log("We are in");
             if (audioSettingsActive && firstAudioButton != null)
-            {
+            {                                                                  
 
                 eventSystem.SetSelectedGameObject(firstAudioButton, new BaseEventData(eventSystem));
 
