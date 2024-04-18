@@ -9,8 +9,11 @@ public class WeaponCheckForAnimation : MonoBehaviour
     private Animator playerAnimator;
 
     [SerializeField]
-    private GameObject equipedSwordSlot;
-    public string equipedWeapon;
+    [Tooltip("Ta InventoryCanvas/Equipment/PlayerEquipmentPanel/PlayerEquipmentPanel/CenterPanel/Sword")]
+    private GameObject equippedSwordSlot;
+
+    [Tooltip("Ändrar även vad som är WeaponEquiped i Animatorn       Inget = 0, Träslev = 1, Klubba = 2, Klubba Kyckling = 3, Bambupinne = 4, Svärdsfisk = 5, Baguette = 6")]
+    public string equippedWeapon;
     
 
 
@@ -18,44 +21,49 @@ public class WeaponCheckForAnimation : MonoBehaviour
     void Start()
     {
         playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-    }
+        equippedSwordSlot = GameObject.FindGameObjectWithTag("EquippedSwordSlot");
+}
 
     // Update is called once per frame
     void Update()
     {
-        if (equipedSwordSlot != null)
+        if (equippedSwordSlot != null)
         {
-            equipedWeapon = equipedSwordSlot.GetComponent<Image>().sprite.name;
+            if (equippedSwordSlot.GetComponent<Image>().sprite == null)
+            {
+                playerAnimator.SetInteger("WeaponEquiped", 0);
+            }
+            else
+            { 
+                equippedWeapon = equippedSwordSlot.GetComponent<Image>().sprite.name;
 
-            if (equipedWeapon == "None")
-            {
-                playerAnimator.SetFloat("WeaponEquiped", 0);
-            }
-            else if (equipedWeapon == "Träslev")
-            {
-                playerAnimator.SetFloat("WeaponEquiped", 1);
+                if (equippedWeapon == "Träslev")
+                {
+                    playerAnimator.SetInteger("WeaponEquiped", 1);
 
+                }
+                else if (equippedWeapon == "Klubba")
+                {
+                    playerAnimator.SetInteger("WeaponEquiped", 2);
+                }
+                else if (equippedWeapon == "Klubba kyckling")
+                {
+                    playerAnimator.SetInteger("WeaponEquiped", 3);
+                }
+                else if (equippedWeapon == "Bambupinne")
+                {
+                    playerAnimator.SetInteger("WeaponEquiped", 4);
+                }
+                else if (equippedWeapon == "Svärdsfisk")
+                {
+                    playerAnimator.SetInteger("WeaponEquiped", 5);
+                }
+                else if (equippedWeapon == "Baguette")
+                {
+                    playerAnimator.SetInteger("WeaponEquiped", 6);
+                }
             }
-            else if (equipedWeapon == "Klubba")
-            {
-                playerAnimator.SetFloat("WeaponEquiped", 2);
-            }
-            else if (equipedWeapon == "Klubba kyckling")
-            {
-                playerAnimator.SetFloat("WeaponEquiped", 3);
-            }
-            else if (equipedWeapon == "Bambupinne")
-            {
-                playerAnimator.SetFloat("WeaponEquiped", 4);
-            }
-            else if (equipedWeapon == "Svärdsfisk")
-            {
-                playerAnimator.SetFloat("WeaponEquiped", 5);
-            }
-            else if (equipedWeapon == "Baguette")
-            {
-                playerAnimator.SetFloat("WeaponEquiped", 6);
-            }
+
         }
     }
 }
