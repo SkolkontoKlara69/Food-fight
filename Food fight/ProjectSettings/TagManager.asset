@@ -15,6 +15,7 @@ TagManager:
   - rebind
   - audio
   - movementSettings
+  - EquippedSwordSlot
   layers:
   - Default
   - TransparentFX

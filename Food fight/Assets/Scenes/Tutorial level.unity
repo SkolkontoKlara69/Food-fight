@@ -15018,6 +15018,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5007674902158092310, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+      propertyPath: m_TagString
+      value: EquippedSwordSlot
+      objectReference: {fileID: 0}
     - target: {fileID: 5007674902181386496, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
       propertyPath: eventSystem
       value: 
