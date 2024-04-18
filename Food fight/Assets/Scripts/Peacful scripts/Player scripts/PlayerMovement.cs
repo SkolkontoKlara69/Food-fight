@@ -189,6 +189,8 @@ public class PlayerMovement : MonoBehaviour
             isTouchingRoof = false;
         }
 
+        animator.SetBool("IsTouchingRoof", isTouchingRoof);
+
         if (isTouchingRoof)
         {
             capsuleCollider.offset = new Vector2(0, -0.27f);
