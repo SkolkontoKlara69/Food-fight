@@ -191,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isTouchingRoof)
         {
-            capsuleCollider.offset = new Vector2(0, -0.07f);
+            capsuleCollider.offset = new Vector2(0, -0.27f);
             capsuleCollider.size = new Vector2(regularSizeX, crouchingSizeY);
             spriteRenderer.sprite = crouched;
             velocity = 5;
