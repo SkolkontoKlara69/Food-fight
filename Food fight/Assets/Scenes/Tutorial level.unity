@@ -3321,6 +3321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b14244f091493204f849c39db83febce, type: 3}
+--- !u!1 &494849375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007674902158092310, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+  m_PrefabInstance: {fileID: 5007674902226987429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &510317164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14831,6 +14836,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 205621909835799466, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: equippedSwordSlot
+      value: 
+      objectReference: {fileID: 494849375}
     - target: {fileID: 2000300728327895603, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_UIInputModule
       value: 
