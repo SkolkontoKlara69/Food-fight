@@ -13,7 +13,7 @@ public class Cat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player (2)");
+        player = GameObject.FindGameObjectWithTag("Player");
         offest = new Vector3(5, -2, 0);
     }
 
