@@ -22,7 +22,7 @@ public class Finish : MonoBehaviour
     private bool complete = false;
     private void Start()
     {        
-        movementScript = GameObject.Find("Player (2)").GetComponent<PlayerMovement>();        
+        movementScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {       
