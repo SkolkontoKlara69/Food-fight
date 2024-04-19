@@ -29,7 +29,7 @@ public class WeaponCheckForAnimation : MonoBehaviour
     {
         if (equippedSwordSlot != null)
         {
-            if (equippedSwordSlot.GetComponent<Image>().sprite == null)
+            if (equippedSwordSlot.GetComponent<Image>().sprite.name == "UIMask")
             {
                 playerAnimator.SetInteger("WeaponEquiped", 0);
             }
