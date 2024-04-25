@@ -5233,6 +5233,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2000300729100107916, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
   m_PrefabInstance: {fileID: 354523105}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &505074423 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2000300729100107925, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 354523105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &505074424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 354523105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488e0ad9b3ef96b4bae1b05f0b1137d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &521277333
 GameObject:
   m_ObjectHideFlags: 0
@@ -8273,6 +8289,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2089368365525000816, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 505074423}
+    - target: {fileID: 2089368365525000816, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
+      propertyPath: movementScript
+      value: 
+      objectReference: {fileID: 505074424}
     - target: {fileID: 2089368365525000818, guid: a8f678554078689429ef5b60f5e1e891, type: 3}
       propertyPath: m_Name
       value: Finish
