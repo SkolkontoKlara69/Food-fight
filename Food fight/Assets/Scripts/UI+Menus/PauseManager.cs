@@ -8,10 +8,12 @@ public class PauseManager : MonoBehaviour
 {
 
     public bool paused;
+    private bool inventoryPause;
     public bool settingsMenu;
 
     public UnityEvent OnPause;
 
+    public GameObject inventory;
     public GameObject pauseMenu;
     public GameObject settingsMenuObj;
 
@@ -65,9 +67,6 @@ public class PauseManager : MonoBehaviour
             //Gör canvasen för paus-menyn synlig
             pauseMenu.SetActive(true);
 
-           
-            
-
         }
         else
         {
@@ -78,5 +77,19 @@ public class PauseManager : MonoBehaviour
             settingsMenuObj.SetActive(false);
         }
 
+        /*if (playerInput.actions["Open&Close Inventory"].triggered)
+        {
+            inventoryPause = !inventoryPause;
+        }
+
+        if(inventoryPause){
+            Time.timeScale = 0f;
+            inventory.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            inventory.SetActive(false);
+        }*/
     }
 }

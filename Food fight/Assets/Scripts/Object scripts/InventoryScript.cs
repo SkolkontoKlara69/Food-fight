@@ -17,7 +17,7 @@ public class InventoryScript : MonoBehaviour
     private PlayerInput playerInput;
 
     private void Start()
-    {
+    { 
         playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
     }
 

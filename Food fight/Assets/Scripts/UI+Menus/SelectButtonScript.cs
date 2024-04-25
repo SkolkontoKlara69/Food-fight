@@ -43,8 +43,7 @@ public class SelectButtonScript : MonoBehaviour
         
         
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.I))
-        {
-            Debug.Log("We are in");
+        { 
             if (audioSettingsActive && firstAudioButton != null)
             {                                                                  
 
