@@ -403,11 +403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: 5.03
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.24
       objectReference: {fileID: 0}
     - target: {fileID: 4488085093856787105, guid: 1a13c5727fea01d45a83692af7c669c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -482,7 +482,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 3
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
