@@ -76,8 +76,8 @@ public class PauseManager : MonoBehaviour
             pauseMenu.SetActive(false);
             settingsMenuObj.SetActive(false);
         }
-
-        /*if (playerInput.actions["Open&Close Inventory"].triggered)
+        
+        if (playerInput.actions["Open&Close Inventory"].triggered)
         {
             inventoryPause = !inventoryPause;
         }
@@ -90,6 +90,7 @@ public class PauseManager : MonoBehaviour
         {
             Time.timeScale = 1f;
             inventory.SetActive(false);
-        }*/
+        }
+        
     }
 }

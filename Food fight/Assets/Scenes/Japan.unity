@@ -9905,30 +9905,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 14dd6a75ab4bdf7459227a4baa3cd0fe, type: 3}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 760698152}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: doubleJumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 75e2df41c8e8cb1458c6257072ea470d, type: 3}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: doubleJumpEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: groundCheckRadius
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2000300729967475734, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.193
@@ -16183,10 +16159,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5007674902158092307, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5007674902181386496, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
       propertyPath: eventSystem
       value: 

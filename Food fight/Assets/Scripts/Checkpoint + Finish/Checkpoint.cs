@@ -6,13 +6,14 @@ public class Checkpoint : MonoBehaviour
 {
     HealthController healthController;
 
-    SpriteRenderer spriteRenderer;    
+    SpriteRenderer spriteRenderer;
     public Animator animator;
+    public AudioSource audioSource;
     Collider2D coll;
 
     private void Awake()
     {
-        healthController = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>();       
+        healthController = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>();
         coll = GetComponent<Collider2D>();
     }
 
@@ -20,8 +21,10 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("touched");
             healthController.UpdateCheckpoint(transform.position);
             animator.SetBool("PlayerHasTouched", true);
+            audioSource.Play();
             coll.enabled = false;
         }
     }
