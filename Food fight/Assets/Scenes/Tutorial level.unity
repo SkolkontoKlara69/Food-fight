@@ -7034,11 +7034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4439411598690618913, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_MaxValue
-      value: 0.2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4439411598690618913, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_MinValue
-      value: -0.8
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 4439411598818542264, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7071,6 +7071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c76075935821a04b84a697c46f3d292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: eae43b779a7829e4395c3cf617a276db, type: 2}
 --- !u!1001 &5007674902226987429
 PrefabInstance:
   m_ObjectHideFlags: 0
