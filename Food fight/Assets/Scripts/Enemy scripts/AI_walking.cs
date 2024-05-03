@@ -7,6 +7,7 @@ public class AI_walking : MonoBehaviour
     public Transform[] patrolPoints;
     public float movmentSpeed;
     public int destination;
+    private bool leftOfEnemy = false;
 
     public Transform playerTransform;
     public bool isChasing;
@@ -35,27 +36,37 @@ public class AI_walking : MonoBehaviour
             if(transform.position.x > playerTransform.position.x)
             {
                 transform.position += Vector3.left * movmentSpeed * Time.deltaTime;
-                if(this.transform.localScale.y < 15)
+                /* if(this.transform.localScale.y < 15)
+                 {
+                     this.transform.localScale = new Vector3(10.434f, 10.434f, 10.434f);
+                 }
+                 else
+                 {
+                     this.transform.localScale = new Vector3(15, 15, 15);
+                 }*/
+                if (leftOfEnemy)
                 {
-                    this.transform.localScale = new Vector3(10.434f, 10.434f, 10.434f);
+                    this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
+                    leftOfEnemy = false;
                 }
-                else
-                {
-                    this.transform.localScale = new Vector3(15, 15, 15);
-                }
-                
             }
             if (transform.position.x < playerTransform.position.x)
             {
                 transform.position += Vector3.right * movmentSpeed * Time.deltaTime;
-                if (this.transform.localScale.y < 15)
+                /*if (this.transform.localScale.y < 15)
                 {
                     this.transform.localScale = new Vector3(-10.434f, 10.434f, 10.434f);
                 }
                 else
                 {
                     this.transform.localScale = new Vector3(-15, 15, 15);
+                }*/
+                if (!leftOfEnemy)
+                {
+                    leftOfEnemy = true;
+                    this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
                 }
+                
             }
         }
         else
