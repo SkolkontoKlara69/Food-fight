@@ -1,6 +1,7 @@
   using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
@@ -8,7 +9,8 @@ public class InventoryScript : MonoBehaviour
 {
     public GameObject InventoryMenu;
     public GameObject firstInventorySlot;
-    public EventSystem eventSystem;
+    //public EventSystem eventSystem;
+    public UnityEvent OnPause;
     private bool menuActivated;
     private bool initialPress;
     public ItemSlot[] itemSlot;
@@ -33,11 +35,13 @@ public class InventoryScript : MonoBehaviour
         }
         else if (playerInput.actions["Open&Close Inventory"].triggered && !menuActivated && !initialPress)
         {
-            eventSystem.firstSelectedGameObject = firstInventorySlot;
+            //eventSystem.firstSelectedGameObject = firstInventorySlot;
             InventoryMenu.SetActive(true);
             menuActivated = true;
+            OnPause.Invoke();
             Time.timeScale = 0;
             initialPress = true;
+            Debug.Log(Time.timeScale);
         }
         if (!playerInput.actions["Open&Close Inventory"].triggered) 
         {

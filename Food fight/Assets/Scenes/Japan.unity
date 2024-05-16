@@ -11094,7 +11094,7 @@ PrefabInstance:
     - target: {fileID: 5007674902181386496, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
       propertyPath: eventSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 819594349}
     - target: {fileID: 5007674902181386502, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
@@ -11183,7 +11183,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1781448714, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
 --- !u!1 &1798428974 stripped
 GameObject:
