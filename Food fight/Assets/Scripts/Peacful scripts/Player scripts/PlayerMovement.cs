@@ -72,6 +72,16 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip doubleJumpSound;
 
+    [Header("Toggle jump")]
+    public bool toggleJump;
+    public bool isJumping;
+    public Toggle jumpToggle;
+
+    [Header("Toggle walk")]
+    public bool toggleWalk;
+    public bool isWalking;
+    public Toggle walkToggle;
+
 
     public Animator animator;
 
@@ -290,5 +300,15 @@ public class PlayerMovement : MonoBehaviour
     public void UpdateToggleCrouch(bool toggleValue)
     {
         toggleCrouch = toggleValue;
+    }
+
+    public void UpdateToggleJump(bool toggleValue)
+    {
+        toggleJump = toggleValue;
+    }
+
+    public void UpdateToggleWalk(bool toggleValue)
+    {
+        toggleWalk = toggleValue;
     }
 }
