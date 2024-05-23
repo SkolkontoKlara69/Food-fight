@@ -105,6 +105,9 @@ public class PlayerMovement : MonoBehaviour
         jumpReady = true;
 
         animator = gameObject.GetComponent<Animator>();
+
+
+        toggleCrouch = false;
     }
 
     // Update is called once per frame
@@ -282,5 +285,10 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         jumpReady = true;
         jumpsRemaining = 2;
+    }
+
+    public void UpdateToggleCrouch(bool toggleValue)
+    {
+        toggleCrouch = toggleValue;
     }
 }
