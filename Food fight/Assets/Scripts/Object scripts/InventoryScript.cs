@@ -18,7 +18,7 @@ public class InventoryScript : MonoBehaviour
 
     private PlayerInput playerInput;
 
-    private void Start()
+    private void onload()
     { 
         playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
     }
@@ -26,14 +26,14 @@ public class InventoryScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (playerInput.actions["Open&Close Inventory"].triggered && menuActivated && !initialPress)
+        if (Input.GetKeyDown("i") && menuActivated && !initialPress)
         { 
             InventoryMenu.SetActive(false);
             menuActivated = false;
             Time.timeScale = 1;
             initialPress = true;
         }
-        else if (playerInput.actions["Open&Close Inventory"].triggered && !menuActivated && !initialPress)
+        else if (Input.GetKeyDown("i") && !menuActivated && !initialPress)
         {
             //eventSystem.firstSelectedGameObject = firstInventorySlot;
             InventoryMenu.SetActive(true);
@@ -43,7 +43,7 @@ public class InventoryScript : MonoBehaviour
             initialPress = true;
             Debug.Log(Time.timeScale);
         }
-        if (!playerInput.actions["Open&Close Inventory"].triggered) 
+        if (Input.GetKeyDown("i")) 
         {
             initialPress = false;
         }

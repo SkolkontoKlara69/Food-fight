@@ -28,6 +28,7 @@ public class EquippedSlot : MonoBehaviour, IPointerClickHandler
     private InventoryScript inventoryScript;
     private ItemSOLibrary itemSOLibrary;
 
+
     private void Start()
     {
         inventoryScript = GameObject.Find("InventoryCanvas").GetComponent<InventoryScript>();
@@ -119,5 +120,17 @@ public class EquippedSlot : MonoBehaviour, IPointerClickHandler
                 itemSOLibrary.itemSO[i].UnEquipItem();
         }
         slotInUse = false;
+    }
+
+    private void Update()
+    {
+        if (!inventoryScript)
+        {
+            Debug.Log("is");
+        }
+        if (!itemSOLibrary)
+        {
+            Debug.Log("isl");
+        }
     }
 }
