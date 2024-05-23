@@ -10459,6 +10459,10 @@ PrefabInstance:
       value: OnContinuePress
       objectReference: {fileID: 0}
     - target: {fileID: 4439411597824242820, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411597824242820, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -10470,6 +10474,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnRebindCategoryPress
       objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1640800830}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateToggleCrouch
+      objectReference: {fileID: 0}
     - target: {fileID: 4439411598429259440, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10479,7 +10495,15 @@ PrefabInstance:
       value: OnAudioCategoryPress
       objectReference: {fileID: 0}
     - target: {fileID: 4439411598818542264, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598818542264, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598818542264, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
