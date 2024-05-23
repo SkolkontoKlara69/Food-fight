@@ -7096,6 +7096,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1142035612}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 315600330}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateToggleCrouch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4439411598429259440, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
