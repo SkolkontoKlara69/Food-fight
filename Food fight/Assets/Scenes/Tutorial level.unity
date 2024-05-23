@@ -6346,6 +6346,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5153304543718495778, guid: 4a083ff041df3a045a302f1b6da19041, type: 3}
   m_PrefabInstance: {fileID: 1475795016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2071097834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007674901832292871, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+  m_PrefabInstance: {fileID: 5007674902226987429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &2072686105 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8467115543134042844, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
@@ -6545,6 +6550,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 203910295855444102, guid: 26d5ddf682371224bb6ca83758bf430e, type: 3}
+      propertyPath: inventoryObject
+      value: 
+      objectReference: {fileID: 2071097834}
     - target: {fileID: 203910295977298625, guid: 26d5ddf682371224bb6ca83758bf430e, type: 3}
       propertyPath: eventSystem
       value: 
@@ -7055,6 +7064,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5007674901832292871, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
+      objectReference: {fileID: 0}
     - target: {fileID: 5007674902158092310, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
       propertyPath: m_TagString
       value: EquippedSwordSlot

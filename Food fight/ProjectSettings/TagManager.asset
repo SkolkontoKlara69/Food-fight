@@ -16,6 +16,8 @@ TagManager:
   - audio
   - movementSettings
   - EquippedSwordSlot
+  - EquipedSwordSlot
+  - Inventory
   layers:
   - Default
   - TransparentFX

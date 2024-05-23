@@ -3,21 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CursorManager : MonoBehaviour
-{
-    /*
-    public void OnGui()
-    {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-    }
-    */
+{ 
+    [SerializeField]
+    public GameObject inventoryObject;
 
-    /* Later, when everything is adapted to not using mouse*/
-    public void Update()
+    public void Start()
     {
         
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void Update()
+    {
+        inventoryObject = GameObject.FindWithTag("Inventory");
+
+        if (inventoryObject != null && inventoryObject.activeInHierarchy)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
        
     } 
 }
