@@ -3031,6 +3031,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &479089779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007674901832292871, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+  m_PrefabInstance: {fileID: 1781448712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &503196907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,6 +3167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 203910295855444102, guid: 26d5ddf682371224bb6ca83758bf430e, type: 3}
+      propertyPath: inventoryObject
+      value: 
+      objectReference: {fileID: 479089779}
     - target: {fileID: 203910295977298625, guid: 26d5ddf682371224bb6ca83758bf430e, type: 3}
       propertyPath: eventSystem
       value: 
@@ -6232,6 +6241,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
+      propertyPath: m_PointAction
+      value: 
+      objectReference: {fileID: 1606636425300133249, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
+    - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
+      propertyPath: m_RightClickAction
+      value: 
+      objectReference: {fileID: 240884173423458034, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
+    - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
+      propertyPath: m_MiddleClickAction
+      value: 
+      objectReference: {fileID: 3249901766575013586, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
+    - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
+      propertyPath: m_ScrollWheelAction
+      value: 
+      objectReference: {fileID: 3277294661356579098, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
+    - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
+      propertyPath: m_TrackedDevicePositionAction
+      value: 
+      objectReference: {fileID: 800854471887038879, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
+    - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
+      propertyPath: m_TrackedDeviceOrientationAction
+      value: 
+      objectReference: {fileID: -7904847380735341847, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
     - target: {fileID: 6108925536206766044, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
       propertyPath: m_Name
       value: EventSystem
@@ -11150,8 +11183,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1781448714, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
 --- !u!1 &1798428974 stripped
 GameObject:
