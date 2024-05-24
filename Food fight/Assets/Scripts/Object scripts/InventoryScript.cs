@@ -10,7 +10,7 @@ public class InventoryScript : MonoBehaviour
     public GameObject InventoryMenu;
     public GameObject firstInventorySlot;
     //public EventSystem eventSystem;
-    public UnityEvent OnPause;
+    //public UnityEvent OnPause;
     private bool menuActivated;
     private bool initialPress;
     public ItemSlot[] itemSlot;
@@ -38,8 +38,8 @@ public class InventoryScript : MonoBehaviour
             //eventSystem.firstSelectedGameObject = firstInventorySlot;
             InventoryMenu.SetActive(true);
             menuActivated = true;
-            OnPause.Invoke();
-            Time.timeScale = 0;
+            //OnPause.Invoke();
+            //Time.timeScale = 0;
             initialPress = true;
             Debug.Log(Time.timeScale);
         }

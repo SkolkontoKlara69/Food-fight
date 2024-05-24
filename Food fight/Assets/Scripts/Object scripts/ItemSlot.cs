@@ -35,6 +35,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public void Start()
     {
         inventoryScript = GameObject.Find("InventoryCanvas").GetComponent<InventoryScript>();
+        //TouchInputModule.force;
     }
 
     public void AddItem(string itemName, string itemDescription, Sprite sprite, ItemType itemType)
@@ -53,6 +54,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log(eventData.button);
+        Debug.Log("oadjfbosdj");
+
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             Debug.Log("Left click");
@@ -63,7 +67,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             OnRightClick();
         }
     }
-
+        
    public void OnLeftClick() 
     {
         if (thisItemSelected)
@@ -103,4 +107,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         itemImage.sprite = emptySprite;
         isFilled = false;
     }
+
+    
 }

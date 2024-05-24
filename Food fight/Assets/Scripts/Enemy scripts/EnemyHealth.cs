@@ -39,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Update()
     {        
-        if (enemyYPosition.position.y < -20)        
+        if (enemyYPosition.position.y < -25)        
             Die();        
     }
 

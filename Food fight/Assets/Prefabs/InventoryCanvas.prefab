@@ -2190,9 +2190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 5007674901832292871}
   firstInventorySlot: {fileID: 1054917514642395169}
-  OnPause:
-    m_PersistentCalls:
-      m_Calls: []
   itemSlot:
   - {fileID: 3998543414363957198}
   - {fileID: 3998543414932016080}
