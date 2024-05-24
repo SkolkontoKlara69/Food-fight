@@ -267,9 +267,34 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         standingOnEnemies = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyLayer);
 
+        if (toggleJump == true)
+        {
+            if (moveInput.y > 0.0f && isJumping == false) //Trycker uppåt och inte hoppar redan --> börjar hoppa
+            {
+                isJumping = true;
+
+            }else if (moveInput.y > 0.0f && isJumping == true)//Trycker uppåt och hoppar redan --> slutar hoppa
+            {
+                isJumping = false;
+            }
+        }
+        else
+        {
+            if (moveInput.y > 0.0f) //Trycker uppåt 
+            {
+                isJumping = true;
+
+            }
+            else //Trycker inte uppåt
+            {
+                isJumping = false;
+            }
+        }
+
+
         if (!doubleJumpEnabled)
         {
-            if (moveInput.y > 0.0f && jumpReady == true && isTouchingGround && !isTouchingRoof && !paused || jumpReady == true && moveInput.y > 0.0f && standingOnEnemies && !isTouchingRoof && !paused)
+            if (isJumping && jumpReady == true && isTouchingGround && !isTouchingRoof && !paused || jumpReady == true && isJumping && standingOnEnemies && !isTouchingRoof && !paused)
             {
                 audioSource.clip = jumpSound;
                 audioSource.Play();
@@ -280,7 +305,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (doubleJumpEnabled)
         {
-            if(moveInput.y > 0.0f && jumpReady && isTouchingGround && !isTouchingRoof && !paused || moveInput.y > 0.0f && jumpReady && standingOnEnemies && isTouchingRoof && !paused)
+            if(isJumping && jumpReady && isTouchingGround && !isTouchingRoof && !paused || isJumping && jumpReady && standingOnEnemies && isTouchingRoof && !paused)
             {
                 audioSource.clip = jumpSound;
                 audioSource.Play();
@@ -288,7 +313,7 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(DoubleJumpCooldown()); 
             }
 
-            if(moveInput.y > 0.0f && !paused && !isTouchingRoof && jumpsRemaining == 1 && jumpReady || moveInput.y > 0.0f && !paused && standingOnEnemies && jumpsRemaining == 1 && jumpReady)
+            if(isJumping && !paused && !isTouchingRoof && jumpsRemaining == 1 && jumpReady || isJumping && !paused && standingOnEnemies && jumpsRemaining == 1 && jumpReady)
             {
                 audioSource.clip = doubleJumpSound;
                 audioSource.Play();
