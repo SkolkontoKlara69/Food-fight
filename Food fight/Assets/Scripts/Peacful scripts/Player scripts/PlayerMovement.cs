@@ -79,7 +79,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Toggle walk")]
     public bool toggleWalk;
-    public bool isWalking;
+    public bool isWalkingRight;
+    public bool isWalkingLeft;
     public Toggle walkToggle;
 
 
@@ -219,9 +220,48 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
         }
+        
+        if (toggleWalk == true)
+        {
+            if (moveInput.x > 0 && isWalkingRight == false) //Ifall man trycker höger och inte redan går åt höger så ska man börja gå åt höger
+            {
+                isWalkingRight = true;
+                isWalkingLeft = false;
 
-        move = moveInput.x;
+            }
+            else if (moveInput.x < 0 && isWalkingLeft == false) //Ifall man trycker vänster och inte redan går åt vänster, så ska man börja gå åt vänster
+            {
+                isWalkingRight = false;
+                isWalkingLeft = true;
+            }
+            else if (moveInput.x > 0 && isWalkingRight == true) //Ifall man trycker höger och redan går åt höger så slutar man gå åt höger, samma sak med den vänstra
+            {
+                isWalkingRight = false;
+                isWalkingLeft = false;
+            }
 
+
+            if (isWalkingLeft == true && isWalkingRight == false)
+            {
+                move = -1;
+            }else if (isWalkingRight && !isWalkingLeft)
+            {
+                move = 1;
+            }
+            else
+            {
+                move = 0;
+            }
+        }
+        else //Säger vilket håll eller om den ska gå överhuvudtaget, för vanlig walking utan toggle
+        {
+            move = moveInput.x;
+        }
+
+
+        
+
+        //Gör så att spelaren går
         player.velocity = new Vector2(velocity * move, player.velocity.y);
 
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
