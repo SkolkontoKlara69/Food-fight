@@ -2187,6 +2187,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1223227449}
+    - target: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateToggleWalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4439411597399818323, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2303,6 +2331,34 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1223227449}
+    - target: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateToggleJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4439411597947707909, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2310,6 +2366,14 @@ PrefabInstance:
     - target: {fileID: 4439411597947707909, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnRebindCategoryPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1223227449}
+    - target: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateToggleCrouch
       objectReference: {fileID: 0}
     - target: {fileID: 4439411598429259440, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2325,6 +2389,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+--- !u!114 &277751321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4439411598343329574, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+  m_PrefabInstance: {fileID: 277751320}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798428974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &277751322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+  m_PrefabInstance: {fileID: 277751320}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &277751323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
+  m_PrefabInstance: {fileID: 277751320}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &282506234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1281755657273377292, guid: e1e16906521fc6f44a39818045afd650, type: 3}
@@ -8399,6 +8496,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1223227451}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: jumpToggle
+      value: 
+      objectReference: {fileID: 277751323}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: walkToggle
+      value: 
+      objectReference: {fileID: 277751322}
+    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+      propertyPath: crouchToggle
+      value: 
+      objectReference: {fileID: 277751321}
     - target: {fileID: 2000300729967475734, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.193
@@ -8423,6 +8536,11 @@ MonoBehaviour:
 --- !u!4 &1223227450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2000300729100107916, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
+  m_PrefabInstance: {fileID: 1223227448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1223227451 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1026559352459222787, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
   m_PrefabInstance: {fileID: 1223227448}
   m_PrefabAsset: {fileID: 0}
 --- !u!50 &1223227453 stripped
