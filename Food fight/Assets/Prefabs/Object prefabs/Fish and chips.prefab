@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4068098816805148016}
   - component: {fileID: 4068098816805148017}
   - component: {fileID: 4068098816805148018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fish and chips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
