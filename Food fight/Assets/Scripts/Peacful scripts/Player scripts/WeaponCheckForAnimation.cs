@@ -4,37 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class WeaponCheckForAnimation : MonoBehaviour
-{ 
+{
 
     private Animator playerAnimator;
 
     [SerializeField]
     [Tooltip("Ta InventoryCanvas/Equipment/PlayerEquipmentPanel/PlayerEquipmentPanel/CenterPanel/Sword")]
-    private GameObject equippedSwordSlot;
+    private Image equippedSwordSlot;
 
     [Tooltip("Ändrar även vad som är WeaponEquiped i Animatorn       Inget = 0, Träslev = 1, Klubba = 2, Klubba Kyckling = 3, Bambupinne = 4, Svärdsfisk = 5, Baguette = 6")]
     public string equippedWeapon;
-    
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-        equippedSwordSlot = GameObject.FindGameObjectWithTag("EquippedSwordSlot");
-}
+        equippedSwordSlot = GameObject.Find("EquipmentImage").GetComponent<Image>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (equippedSwordSlot != null)
         {
-            if (equippedSwordSlot.GetComponent<Image>().sprite.name == "UIMask")
+            if (equippedSwordSlot.sprite.name == "UIMask")
             {
                 playerAnimator.SetInteger("WeaponEquiped", 0);
             }
             else
-            { 
+            {
                 equippedWeapon = equippedSwordSlot.GetComponent<Image>().sprite.name;
 
                 if (equippedWeapon == "Träslev")
