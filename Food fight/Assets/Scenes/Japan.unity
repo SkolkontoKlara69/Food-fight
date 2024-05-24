@@ -6244,7 +6244,7 @@ PrefabInstance:
     - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
       propertyPath: m_PointAction
       value: 
-      objectReference: {fileID: 1606636425300133249, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
+      objectReference: {fileID: -9122846773215743498, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
     - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
       propertyPath: m_RightClickAction
       value: 
