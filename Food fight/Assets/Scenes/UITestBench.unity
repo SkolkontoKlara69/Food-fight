@@ -1962,6 +1962,13 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   jumpSound: {fileID: 0}
   doubleJumpSound: {fileID: 0}
+  toggleJump: 0
+  isJumping: 0
+  jumpToggle: {fileID: 0}
+  toggleWalk: 0
+  isWalkingRight: 0
+  isWalkingLeft: 0
+  walkToggle: {fileID: 0}
   animator: {fileID: 0}
 --- !u!114 &315600331
 MonoBehaviour:
@@ -5025,7 +5032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896072259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.009, y: 0.388, z: 0}
+  m_LocalPosition: {x: -0.009, y: 0.25, z: 0}
   m_LocalScale: {x: 0.30594, y: 0.26027, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
