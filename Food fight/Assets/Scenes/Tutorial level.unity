@@ -1346,6 +1346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b14244f091493204f849c39db83febce, type: 3}
+--- !u!1 &494849375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007674902158092310, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+  m_PrefabInstance: {fileID: 5007674902226987429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &510317164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6783,7 +6788,7 @@ PrefabInstance:
     - target: {fileID: 205621909835799466, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: equippedSwordSlot
       value: 
-      objectReference: {fileID: 5007674902226987430}
+      objectReference: {fileID: 494849375}
     - target: {fileID: 2000300728327895603, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: m_UIInputModule
       value: 
@@ -6804,10 +6809,6 @@ PrefabInstance:
       propertyPath: HealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 761850536}
-    - target: {fileID: 2000300729100107915, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 2000300729389559111}
     - target: {fileID: 2000300729100107915, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: hitSound
       value: 
@@ -6873,21 +6874,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059275427}
     - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 2000300729389559111}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 14dd6a75ab4bdf7459227a4baa3cd0fe, type: 3}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: jumpToggle
-      value: 
-      objectReference: {fileID: 4439411598034099792}
-    - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-      propertyPath: walkToggle
-      value: 
-      objectReference: {fileID: 4439411598034099791}
     - target: {fileID: 2000300729100107919, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
       propertyPath: audioSource
       value: 
@@ -6925,11 +6914,6 @@ PrefabInstance:
 --- !u!50 &2000300729389559110 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2000300729100107925, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
-  m_PrefabInstance: {fileID: 2000300729389559109}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2000300729389559111 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1026559352459222787, guid: c8981f09687216948b5bdf3e61b4408e, type: 3}
   m_PrefabInstance: {fileID: 2000300729389559109}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3982921143915906125
@@ -7190,28 +7174,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
---- !u!114 &4439411598034099791 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4439411596989261439, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
-  m_PrefabInstance: {fileID: 4439411598034099790}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4439411598034099792 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4439411597846469500, guid: a366bc9b6ce3f874498f3ed2b407bb9c, type: 3}
-  m_PrefabInstance: {fileID: 4439411598034099790}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5007674902226987429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7317,11 +7279,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
---- !u!1 &5007674902226987430 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5007674901779591333, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
-  m_PrefabInstance: {fileID: 5007674902226987429}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5674242816840535085
 PrefabInstance:
   m_ObjectHideFlags: 0

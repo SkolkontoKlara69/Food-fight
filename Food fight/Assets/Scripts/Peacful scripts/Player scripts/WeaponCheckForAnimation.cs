@@ -10,7 +10,7 @@ public class WeaponCheckForAnimation : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Ta InventoryCanvas/Equipment/PlayerEquipmentPanel/PlayerEquipmentPanel/CenterPanel/Sword")]
-    private Image equippedSwordSlot;
+    private GameObject equippedSwordSlot;
 
     [Tooltip("Ändrar även vad som är WeaponEquiped i Animatorn       Inget = 0, Träslev = 1, Klubba = 2, Klubba Kyckling = 3, Bambupinne = 4, Svärdsfisk = 5, Baguette = 6")]
     public string equippedWeapon;
@@ -21,7 +21,7 @@ public class WeaponCheckForAnimation : MonoBehaviour
     void Start()
     {
         playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-        equippedSwordSlot = GameObject.Find("EquipmentImage").GetComponent<Image>();
+        equippedSwordSlot = GameObject.FindGameObjectWithTag("EquippedSwordSlot");
 }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class WeaponCheckForAnimation : MonoBehaviour
     {
         if (equippedSwordSlot != null)
         {
-            if (equippedSwordSlot.sprite.name == "UIMask")
+            if (equippedSwordSlot.GetComponent<Image>().sprite.name == "UIMask")
             {
                 playerAnimator.SetInteger("WeaponEquiped", 0);
             }
