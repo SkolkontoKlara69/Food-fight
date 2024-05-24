@@ -4130,6 +4130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+--- !u!1 &697570902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007674901832292871, guid: 868bb83a6acec6a4399b6f29ae4f2b87, type: 3}
+  m_PrefabInstance: {fileID: 697570901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &701571963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4221,6 +4226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 203910295855444102, guid: 26d5ddf682371224bb6ca83758bf430e, type: 3}
+      propertyPath: inventoryObject
+      value: 
+      objectReference: {fileID: 697570902}
     - target: {fileID: 203910295977298625, guid: 26d5ddf682371224bb6ca83758bf430e, type: 3}
       propertyPath: eventSystem
       value: 
@@ -6350,6 +6359,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6108925536206766016, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
+      propertyPath: m_PointAction
+      value: 
+      objectReference: {fileID: -9122846773215743498, guid: 48b055649e77a2f408bdf9c102579a09, type: 3}
     - target: {fileID: 6108925536206766044, guid: 07d38e07c0ab9194e8c7f58c728fc9fa, type: 3}
       propertyPath: m_Name
       value: EventSystem
