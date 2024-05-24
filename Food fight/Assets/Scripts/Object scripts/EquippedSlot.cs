@@ -121,16 +121,4 @@ public class EquippedSlot : MonoBehaviour, IPointerClickHandler
         }
         slotInUse = false;
     }
-
-    private void Update()
-    {
-        if (!inventoryScript)
-        {
-            Debug.Log("is");
-        }
-        if (!itemSOLibrary)
-        {
-            Debug.Log("isl");
-        }
-    }
 }

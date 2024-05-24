@@ -26,7 +26,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private EquippedSlot headSlot, swordSlot;
 
-
+    private HatOnPlayer hattScript;
 
     public GameObject selectedShader;
     public bool thisItemSelected;
@@ -36,6 +36,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     {
         inventoryScript = GameObject.Find("InventoryCanvas").GetComponent<InventoryScript>();
         //TouchInputModule.force;
+        hattScript = GameObject.Find("Hatt").GetComponent<HatOnPlayer>();
     }
 
     public void AddItem(string itemName, string itemDescription, Sprite sprite, ItemType itemType)
@@ -54,12 +55,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log(eventData.button);
-        Debug.Log("oadjfbosdj");
 
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            Debug.Log("Left click");
             OnLeftClick();
         }
         if (eventData.button == PointerEventData.InputButton.Right)
@@ -73,6 +71,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         if (thisItemSelected)
         {
             EquipGear();
+            hattScript.UppdateHatt();
         }
 
         else
